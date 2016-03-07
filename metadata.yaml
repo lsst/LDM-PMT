@@ -1,0 +1,8 @@
+doc_id: 'LDM-463'
+doc_title: 'LSST DM Project Management Tools'
+copyright: '2016, AURA/LSST'
+authors:
+    - Jacek Becla
+# Current document version
+last_revised: 'March 6, 2016'
+version: '0.1.dev'
