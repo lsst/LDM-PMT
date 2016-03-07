@@ -2,9 +2,9 @@
 LDM-PMT
 #######
 
-================================
-LSST DM Project Management Tools
-================================
+====================================
+LSST DM Project Management and Tools
+====================================
 
 This is a working repository for *LDM-PMT: LSST DM Project Management and Tools*.
 
