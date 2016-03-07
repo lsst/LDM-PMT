@@ -1,4 +1,4 @@
-:tocdepth: 1
+:tocdepth: 2
 
 .. sectnum::
 
@@ -24,10 +24,29 @@ Introduction
  * funded under NSF MREFC, process needs to be formal
 
 
+People
+======
+
+ * DM Project Manager responsible for overall plan, schedule and priorities.
+ * Delegates to TCAMs work within the teams they manage
+
+TCAMs Roles:
+ * come up with up to date long term plan for the team
+ * maintain the plan
+   - adjust to changing needs, replan as resource availability changes
+ * come up with detailed, resouce loaded plan for each upcoming cycles
+ * executing the short term plan, typically through sprints
+
+
 .. _planning-process:
 
 Planning Process
 ================
+
+.. _methodology:
+
+Planning Methodology
+--------------------
 
 Top down and bottom up, periodically re-synchronizing both.
  * top-down plan produced at the beginning of construction [footnote: major overhaul undertaken 1 1/2 year
@@ -36,11 +55,12 @@ Top down and bottom up, periodically re-synchronizing both.
  * top-down / bottom up resynchronized annually, exported to LDM-240, that becomes an official baseline
 
 Top down
+~~~~~~~~
  * project-level requirements, risks
  * dm requirements (dpdd, ...)
  * baseline architecture (apps, middleware, db, infra model...)
-    - covers all requirements
-    - discusses what features are part of baseline, and which are out of scope
+   - covers all requirements
+   - discusses what features are part of baseline, and which are out of scope
  * project-level milestones
  * dm milestones
    - cover entire construction period
@@ -48,11 +68,15 @@ Top down
    - o(several hundred) milestones
    - dividing into two categories: externally visible, an internal
      - externally visible, every attempt is made to keep them as stable as possible
-     - internal are more flexible
+     - internal milestones are more flexible
         - for internal milestones, keep track of early customers that need them
         - if we need to push milestones for later, we know who to check with and negotiate
 
+
+.. _bottomup:
+
 Bottom up
+~~~~~~~~~
  * track every piece of work, every task, every non-trivial activity that needs to be
    done during construction along with resources
  * keep track of which part of baseline each piece of work addresses
@@ -61,11 +85,18 @@ Bottom up
  * it should always reflect reality
    - change it as a need arises (agile), and get CCB approval for resource/scope change
 
+
+.. _middlefield:
+
 Middlefield
+~~~~~~~~~~~
  * re-sync bottom-up with to-down and refresh the baseline long-term resource-loaded plan once a year
 
 
-Cycles and releases
+.. _cycles-and-releases:
+
+Cycles and Releases
+-------------------
  * All work divided into 6-month "cycles"
  * each cycle produces a "release", sprint (Nov-Apr), fall (May-Oct)
    * official QA, come with documentation
@@ -73,15 +104,16 @@ Cycles and releases
  * setting priorities, exact scope and order of work is ultimately the responsibility of the DM Project Manager
 
 
+-- _cycle-planning:
+
 Cycle Planning
-~~~~~~~~~~~~~~
+--------------
 
  * plan all 6 months
    - detailed plan, resource loaded
    - (describe spreadsheet here)
  * loading 3
  * fine-tuning, load the rest in 2nd month + LCR
-
  * buillding realistic plan
     - not adding any *artificial* padding or buffers
     - reserving time for expected problems/bugs/issues
@@ -93,9 +125,7 @@ Cycle Planning
     - Reserving time for documentation, recommended 1-2 week sprint at the beginning of cycle to
       bring all documentation up to date with the work done in previous cycle
  * while doing cycle plan, combing through the list of all work during cycle planning, reordering as needed
-
  * plan is verified and issues such overloaded developers are caught
-
  * plan captures all non-LOE activities
 
 
@@ -115,9 +145,63 @@ Resource loading a cycle
  * team --> story pool
  * assigning available story points per developer
 
+Sprints and Boards
+------------------
+
+ * monthly cadence
+ * defining stories
+   * assign to developers
+     * each story should have >0 SPs
+ - related docs
+    https://confluence.lsstcorp.org/pages/viewpage.action?pageId=21397653
+
+ - each team should have a board (scrum for non-LOE, kanban for LOE).
+ - this includes kanban DMLT board, kanban DM Sys Eng board
+ - for LOE: no need to capture repeated, obvious LOE tasks, but if there is any work that is worth telling others about, capture it through a story on kanban board
+ - monthly sprints
+ - 5 min/team sprint report during DM-AHM virtual standup at the beginning of each month
+ - DM-AHM short presentations from each team at the beginning of each cycle introducing work planned for upcoming cycle
+ - central DM board
+
+ - schedule appropriate number of SPs each sprint, don't let it fall behind
+ - avoid adding stories to sprint except blockers / crititical.
+ - we will be looking at burndown charts every month
+   - [sui JS 1.5 is a great example]
+
+Keeping Plan Up-to-date
+-----------------------
+
+In JIRA
+ * have defined epics for every major piece of work, assigned estimated story points
+ * as we learn more, fine-tune design, we
+   - improve the epics:
+     - add more detailed description
+     - define stories
+       - fine tune story points (that might change resources needed)
+   - occasionally requirements might change, or we might discovered the plan is missing a feature
+      - this might lead to creating new epics, or deleting existing epics
+   - every time that happens, revisit overall plan to make sure it is not overloaded.
+     - rebalance
+   - attempting to avoid disrupting milestones, in particular the externally visible milestones
+   - each change to scope of resources must be approved by CCB
+
+ * so, the plan in PMCS is agile, always reflects true, most up-to-date state
+ * allows developers to feel unconstraint by the rigidness of PMCS
+
+
+Monitoring
+-----------
+ * scripts for monitoring / flagging / alerting
+   - mark epics in progress when stories in progress/done
+   - sum of story points for all stories in epic significantly differs for epic SP estimate
+   - stories in progress for too long
+   - stories too large
+   - too many stories per developer in a month
+   - etc
+
 
 Tools
------
+=====
 
  * JIRA DM project
    - tracks all non-LOE software work
@@ -169,47 +253,9 @@ JIRA
  * only assign a person to a story when it is known for sure that given person will be the one working on that story. In practice, names should be assigned to stories when planning resources for current/next cycle, or when something urgent/critical comes up, or when it is really trivial (< 0.5 SP). Otherwise leave as "Unassigned", unless there is only one and only expert that can handle a given story.
 
 
-Keeping JIRA Plan Up-to-date
-----------------------------
-
-In JIRA
- * have defined epics for every major piece of work, assigned estimated story points
- * as we learn more, fine-tune design, we
-   - improve the epics:
-     - add more detailed description
-     - define stories
-       - fine tune story points (that might change resources needed)
-   - occasionally requirements might change, or we might discovered the plan is missing a feature
-      - this might lead to creating new epics, or deleting existing epics
-   - every time that happens, revisit overall plan to make sure it is not overloaded.
-     - rebalance
-   - attempting to avoid disrupting milestones, in particular the externally visible milestones
-   - each change to scope of resources must be approved by CCB
-
- * so, the plan in PMCS is agile, always reflects true, most up-to-date state
- * allows developers to feel unconstraint by the rigidness of PMCS
-
- * scripts for monitoring / flagging / alerting
-   - mark epics in progress when stories in progress/done
-   - sum of story points for all stories in epic significantly differs for epic SP estimate
-   - stories in progress for too long
-   - stories too large
-   - too many stories per developer in a month
-   - etc
-
-
-TCAMs Roles
------------
-
- * come up with up to date long term plan for the team
- * maintain the plan
-   - adjust to changing needs, replan as resource availability changes
- * come up with detailed, resouce loaded plan for each upcoming cycles
- * executing the short term plan, typically through sprints
-
 
 JIRA Best Practices
--------------------
+~~~~~~~~~~~~~~~~~~~
 
  - no stories with more than ~26 SPs! (we have a few that are above 100)
  - stories should not span sprints
@@ -220,7 +266,7 @@ JIRA Best Practices
 
 
 JIRA and current cycle plan in PMCS
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * All epics that are part of current cycle are considered "PMCS-locked".
    That means changes to scope (eg, description) and resources (eg story points)
    can only be made by the TCAM responsible for given epic (typically with
@@ -230,30 +276,15 @@ JIRA and current cycle plan in PMCS
  * TCAMs should monitor all changes to activities assigned to their team
    (rss feed is good for that)
 
+PMCS
+----
 
-Sprints and Boards
-------------------
+(short descr what it gives us)
 
- * monthly cadence
- * defining stories
-   * assign to developers
-     * each story should have >0 SPs
- - related docs
-    https://confluence.lsstcorp.org/pages/viewpage.action?pageId=21397653
+Custom Tools
+------------
 
- - each team should have a board (scrum for non-LOE, kanban for LOE).
- - this includes kanban DMLT board, kanban DM Sys Eng board
- - for LOE: no need to capture repeated, obvious LOE tasks, but if there is any work that is worth telling others about, capture it through a story on kanban board
- - monthly sprints
- - 5 min/team sprint report during DM-AHM virtual standup at the beginning of each month
- - DM-AHM short presentations from each team at the beginning of each cycle introducing work planned for upcoming cycle
- - central DM board
-
- - schedule appropriate number of SPs each sprint, don't let it fall behind
- - avoid adding stories to sprint except blockers / crititical.
- - we will be looking at burndown charts every month
-   - [sui JS 1.5 is a great example]
-
+(mention ecam
 
 Reporting Process
 =================
