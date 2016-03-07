@@ -6,9 +6,9 @@ LDM-PMT
 LSST DM Project Management Tools
 ================================
 
-This is a working repository for *LDM-PMT: LSST DM Project Management Tools*.
+This is a working repository for *LDM-PMT: LSST DM Project Management and Tools*.
 
-* Read the living document on the web: http://ldm-pmt.lsst.io 
+* Read the living document on the web: http://ldm-pmt.lsst.io
 
 Working with this document
 --------------------------
