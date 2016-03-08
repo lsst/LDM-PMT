@@ -104,7 +104,7 @@ Cycles and Releases
  * setting priorities, exact scope and order of work is ultimately the responsibility of the DM Project Manager
 
 
--- _cycle-planning:
+.. _cycle-planning:
 
 Cycle Planning
 --------------
@@ -114,7 +114,7 @@ Cycle Planning
    - (describe spreadsheet here)
  * loading 3
  * fine-tuning, load the rest in 2nd month + LCR
- * buillding realistic plan
+ * building realistic plan
     - not adding any *artificial* padding or buffers
     - reserving time for expected problems/bugs/issues
     - each piece of work clearly defined, scoped, with clear deliverables, not just "continue doing x"
@@ -129,10 +129,11 @@ Cycle Planning
  * plan captures all non-LOE activities
 
 
+
 Resource loading a cycle
 ------------------------
 
- * 1850 h/year
+ * 1800 h/year
  * xx per month
  * adjusting to capture LOE time, eg, tcam spending 50% on non-coding
  * Adjusting to capture science time (20%)
@@ -144,6 +145,21 @@ Resource loading a cycle
 
  * team --> story pool
  * assigning available story points per developer
+
+
+Resource loading for bugs
+-------------------------
+
+There are two schools:
+ * bugs should have story points. This helps to understand real velocity
+ * bugs should not have stories points because developers already earned value for completing the story that led to the bug, and they should not receive more points for it, they shouldn't have earned the points to begin with
+
+(need to decide, Camera Team does the later. I am leaning towards the former, reserving reasonable number of story points in the long term plan for bug fixes, carefully tracking story points used for bug fixes in each cycle, and adjusting the planned number of story points for bug fixes in future cycles based on findings)
+
+related reading:
+ * http://programmers.stackexchange.com/questions/162145/story-points-for-bug-fixing-tasks-is-it-suitable-for-scrum
+ * http://www.infoq.com/news/2011/01/story-points-to-bugs
+
 
 Sprints and Boards
 ------------------
@@ -167,6 +183,7 @@ Sprints and Boards
  - avoid adding stories to sprint except blockers / crititical.
  - we will be looking at burndown charts every month
    - [sui JS 1.5 is a great example]
+
 
 Keeping Plan Up-to-date
 -----------------------
