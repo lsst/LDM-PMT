@@ -151,9 +151,9 @@ Cycle Planning
 
   - (describe spreadsheet here)
 
-* loading 3
+* load the first three months
 
-* fine-tuning, load the rest in 2nd month + LCR
+* fine-tune the last three months, load in 2nd month + LCR
 
 * building realistic plan
 
