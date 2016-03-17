@@ -27,10 +27,65 @@ Introduction
 * funded under NSF MREFC, process needs to be formal
 
 
+.. _baseline-plan:
+
+Baseline DM Plan
+================
+
+The baseline design and architecture of the DM subsystem is captured through a set of change-controlled documents:
+
+* (list them here, DPDD, apps, middleware, DB, cost model etc)
+
+These documents describes all work that needs to be done.
+
+The plan to execute the DM work is tracked through *milestones* which mark specific deliverables along the project timeline, and *epics* which capture resource-loaded work activities. Every non-trivial activity requiring few FTE-month work is explicitly captured. This leads to o(few hundred) milestones and o(thousand) epics.
+
+Each milestone has a **description**, and **due date**. It has no duration, and no resources assigned to it.
+
+Each epic has: a clear **scope and deliverables**, **resource cost**, and an **end date**. It also tracks which section of which baseline document it addresses (this needs to be implemented). This simplifies verification whether all parts of the baseline have been captured in the plan.
+
+There is a well defined relationship between epics and milestones: epics block milestones, milestones can block other milestones.
+
+The baseline plan (milestones and epics) is under the change control. Every non-trivial adjustment to scope, cost or schedule requires change control approval.
+
+
+The baseline plan has been assembled using a mix of top-down and bottom-up analysis. Top-down analysis involved analyzing project-level requirements and risks, as well as the DM requirements and baseline architecture for all components of the DM subsystem. Bottom-up analysis involved analysing all activities that need to be done and estimating their cost through prototyping and research as needed. [footnote: major replanning undertaken 1 1/2 year after start of construction]
+
+Updating baseline
+=================
+
+Small adjustments to the baseline can be made by TCAMs in agile way. This includes small changes to SPs, moving SPs between activities, changing dates etc. All such changes are tracked and revisited semi-annually. Impact on scope, cost and schedule is revisited and the changes are submitted to CCB.
+
+Major changes that have potentila to significantly impact scope, cost of schedule need to be discussed at DMLT and approved by TCT before they can be implemented.
+
+This gives TCAMs agility and flexibility to adjust their plans, while we ensure the scope/cost/schedule
+
+Example changes that do NOT require change control approval: division of work within an epic, splitting a larger epic into a set of smaller epics that have the same scope, cost and end date.
+
+
+
+
+
+.. _cycles-and-releases:
+
+Cycles and Releases
+===================
+
+* All work captured in the Baseline Plan is divided into 6-month "cycles"
+
+* Scope of each cycle is driven by the Baseline Plan.
+
+* Each cycle produces a "release", spring (Nov-Apr), fall (May-Oct)
+
+  - official QA, come with documentation
+
+
 People
 ======
 
 * DM Project Manager responsible for overall plan, schedule and priorities.
+
+* setting prioritiesand order of work is ultimately the responsibility of the DM Project Manager. De facto, that drives what is done in each cycle/release.
 
 * Delegates to TCAMs work within the teams they manage
 
@@ -45,99 +100,10 @@ TCAMs Roles:
 * executing the short term plan, typically through sprints
 
 
-.. _planning-process:
+.. _planning:
 
-Planning Process
-================
-
-.. _methodology:
-
-Planning Methodology
---------------------
-
-Top down and bottom up, periodically re-synchronizing both.
-
-* top-down plan produced at the beginning of construction [footnote: major overhaul undertaken 1 1/2 year after start of construction]
-
-* bottm up updated continuously
-
-* top-down / bottom up resynchronized annually, exported to LDM-240, that becomes an official baseline
-
-
-.. _topdown:
-
-Top down
-~~~~~~~~
-
-* project-level requirements, risks
-
-* dm requirements (dpdd, ...)
-
-* baseline architecture (apps, middleware, db, infra model...)
-
-  - covers all requirements
-
-  - discusses what features are part of baseline, and which are out of scope
-
-* project-level milestones
-
-* dm milestones
-
-  - cover entire construction period
-
-  - every non-trivial part of the baseline architecture have at least one milestone
-
-  - o(several hundred) milestones
-
-  - dividing into two categories: externally visible, an internal
-
-    + externally visible, every attempt is made to keep them as stable as possible
-
-    + internal milestones are more flexible
-
-      - for internal milestones, keep track of early customers that need them
-
-      - if we need to push milestones for later, we know who to check with and negotiate
-
-
-.. _bottomup:
-
-Bottom up
-~~~~~~~~~
-
-* track every piece of work, every task, every non-trivial activity that needs to be done during construction along with resources
-
-* keep track of which part of baseline each piece of work addresses
-
-* keep track which piece of work blocks which milestone
-
-* it should always reflect reality
-
-  - change it as a need arises (agile), and get CCB approval for resource/scope change
-
-
-.. _middlefield:
-
-Middlefield
-~~~~~~~~~~~
-
-* re-sync bottom-up with to-down and refresh the baseline long-term resource-loaded plan once a year
-
-
-.. _cycles-and-releases:
-
-Cycles and Releases
--------------------
-
-* All work divided into 6-month "cycles"
-
-* each cycle produces a "release", sprint (Nov-Apr), fall (May-Oct)
-
-  - official QA, come with documentation
-
-* scope and priorities driven by the baseline long term plan
-
-* setting priorities, exact scope and order of work is ultimately the responsibility of the DM Project Manager
+Planning
+========
 
 
 .. _cycle-planning:
@@ -147,7 +113,7 @@ Cycle Planning
 
 * plan all 6 months
 
-  - detailed plan, resource loaded
+  - detailed plan, resource loaded, non-LOE
 
   - (describe spreadsheet here)
 
@@ -172,9 +138,9 @@ Cycle Planning
   - Reserving time for documentation, recommended 1-2 week sprint at the beginning of cycle to
     bring all documentation up to date with the work done in previous cycle
 
-* while doing cycle plan, combing through the list of all work during cycle planning, reordering as needed
+* while doing cycle plan, combing through the backlog (the list of all work), reordering as needed
 
-* plan is verified and issues such overloaded developers are caught
+* plan is verified and issues such "overloaded developers" are caught
 
 * plan captures all non-LOE activities
 
@@ -184,7 +150,7 @@ Resource loading a cycle
 
 * 1800 h/year
 
-* xx per month
+* 150 per month
 
 * adjusting to capture LOE time, eg, tcam spending 50% on non-coding
 
@@ -194,13 +160,13 @@ Resource loading a cycle
 
 * left: xx h, = xx story points per FTE-month
 
-* 1 FTE-month = 26 SPs, 50% TCAM = 13 SPs
+* 1 FTE-month = 26 SPs
 
-* ok to show LOE activities but should not be part of epics with cycle (tracked by PMCS)
-
-* team --> story pool
+* the size of the team determines the pool of available stories
 
 * assigning available story points per developer
+
+* ok to show LOE activities but should not be part of epics with cycle (tracked by PMCS)
 
 
 Resource loading for bugs
@@ -258,35 +224,19 @@ Sprints and Boards
 Keeping Plan Up-to-date
 -----------------------
 
-In JIRA:
+As the need to adjust the plan arises, we:
 
-* have defined epics for every major piece of work, assigned estimated story points
+* estimate scope and/or cost change
 
-* as we learn more, fine-tune design, we
+* model it in the plan: add new epic(s) and/or milestone(s)
 
-  - improve the epics:
+* re-schedule to make sure plan is not overloaded
 
-    + add more detailed description
+  - if it is a new scope, remove other scope if possible, or request contingency
 
-  - define stories
+* obtain Change Control Board approval
 
-    + fine tune story points (that might change resources needed)
-
-* occasionally requirements might change, or we might discovered the plan is missing a feature
-
-  - this might lead to creating new epics, or deleting existing epics
-
-* every time that happens, revisit overall plan to make sure it is not overloaded.
-
-* rebalance
-
-* attempting to avoid disrupting milestones, in particular the externally visible milestones
-
-* each change to scope of resources must be approved by CCB
-
-* so, the plan in PMCS is agile, always reflects true, most up-to-date state
-
-* allows developers to feel unconstraint by the rigidness of PMCS
+* semi-annually update and release a new baseline
 
 
 Monitoring
@@ -309,6 +259,27 @@ Monitoring
 
 Tools
 =====
+
+* Master copy of milestones in PMCS
+
+* Master copy of epics in JIRA DM project
+
+* For milestone-based drill down we use spreadsheet
+  - generated monthly from PMCS, available online in shared space
+  - enables drill down per milestone level, per WBS, per FY, what blocks what
+  - this will replace LDM-240
+
+* For epic-based drill down we use live, webbased tool
+  - like http://slac.stanford.edu/~becla/tmp/ldm-240.html
+  - drill down per WBS, per FY
+
+* JIRA DLP - default interface for TCAMs to enter info about milestones
+  and blocking relationships
+  - TCAMs do not have to use DLP: to update milestones, tcams use DLP, or tell Kevin
+  - Kevin will have tool to synchronize PMCS / JIRA DLP (both ways)
+  - we are getting rid of meta-epics
+
+
 
 * JIRA DM project
 
@@ -427,6 +398,8 @@ Custom Tools
 
 (mention eCAM)
 
+mention spreadsheet
+ - can drill down ...
 
 Reporting Process
 =================
