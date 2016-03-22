@@ -13,19 +13,25 @@ Change Record
 | 0.1         | 3/06/2016  | Initial version.                 | Jacek Becla     |
 +-------------+------------+----------------------------------+-----------------+
 
+.. warning::
+
+  This is a very early and incomplete draft (more like a collection of thoughts and notes) to stimulate discussion. In particular, note that information does not flow as it should, for example, we are talking about jira, story points etc before they are properly introduced. This will all need to be fixed.
+
+
 .. _intro:
 
 Introduction
 ============
 
-* LSST construction, complex software, large team, long time
+* LSST construction = large team, long term, complex software
 
-* need robust process to plan, to maintain the plan, to track progress and fully execute the plan
-
-* need detailed, realistic resource-loaded, long-term plan covering entire construction
+* need robust project management process
 
 * funded under NSF MREFC, process needs to be formal
 
+* need realistic plan. Resource-loaded, covering entire construction
+
+* need to maintain the plan, to track progress and fully execute the plan
 
 .. _baseline-plan:
 
@@ -38,30 +44,29 @@ The baseline design and architecture of the DM subsystem is captured through a s
 
 These documents describes all work that needs to be done.
 
-The plan to execute the DM work is tracked through *milestones* which mark specific deliverables along the project timeline, and *epics* which capture resource-loaded work activities. Every non-trivial activity requiring few FTE-month work is explicitly captured. This leads to o(few hundred) milestones and o(thousand) epics.
+Work is divided into smaller activities, called *epics*. All epics are resource-loaded. Execution of the work is tracked through *milestones* which mark specific deliverables along the project timeline.
+
+Every non-trivial activity requiring few FTE-month work is explicitly captured. This leads to o(few hundred) milestones and o(thousand) epics.
 
 Each milestone has a **description**, and **due date**. It has no duration, and no resources assigned to it.
 
-Each epic has: a clear **scope and deliverables**, **resource cost**, and an **end date**. It also tracks which section of which baseline document it addresses (this needs to be implemented). This simplifies verification whether all parts of the baseline have been captured in the plan.
+Each epic has: a clear **scope and deliverable(s)**, **resource cost**, and an **end date**. It also tracks which section of which baseline document it addresses (this needs to be implemented). This simplifies verification whether all parts of the baseline have been captured in the plan.
 
 There is a well defined relationship between epics and milestones: epics block milestones, milestones can block other milestones.
 
-The baseline plan (milestones and epics) is under the change control. Every non-trivial adjustment to scope, cost or schedule requires change control approval.
+The baseline plan (milestones and epics) is under change control. Every non-trivial adjustment to scope, cost or schedule requires approval of the CCB.
 
 
 The baseline plan has been assembled using a mix of top-down and bottom-up analysis. Top-down analysis involved analyzing project-level requirements and risks, as well as the DM requirements and baseline architecture for all components of the DM subsystem. Bottom-up analysis involved analysing all activities that need to be done and estimating their cost through prototyping and research as needed. [footnote: major replanning undertaken 1 1/2 year after start of construction]
 
-Updating baseline
+Updating Baseline
 =================
 
-Small adjustments to the baseline can be made by TCAMs in agile way. This includes small changes to SPs, moving SPs between activities, changing dates etc. All such changes are tracked and revisited semi-annually. Impact on scope, cost and schedule is revisited and the changes are submitted to CCB.
+Small adjustments to the baseline can be made by TCAMs in agile way. This includes small changes to SPs, moving SPs between activities, changing dates etc. All such changes are tracked and revisited semi-annually. Impact on scope, cost and schedule is revisited and if it is above pre-set level, the changes are submitted to CCB.
 
-Major changes that have potentila to significantly impact scope, cost of schedule need to be discussed at DMLT and approved by TCT before they can be implemented.
+Major changes that have potential to significantly impact scope, cost of schedule need to be discussed at DMLT and approved by TCT before they can be implemented.
 
-This gives TCAMs agility and flexibility to adjust their plans, while we ensure the scope/cost/schedule
-
-Example changes that do NOT require change control approval: division of work within an epic, splitting a larger epic into a set of smaller epics that have the same scope, cost and end date.
-
+This gives TCAMs agility and flexibility to adjust their plans, while we ensure the scope/cost/schedule is well controlled and managed.
 
 
 
@@ -73,11 +78,11 @@ Cycles and Releases
 
 * All work captured in the Baseline Plan is divided into 6-month "cycles"
 
-* Scope of each cycle is driven by the Baseline Plan.
+* Scope of each cycle is driven by the Baseline Plan, in particular by milestones.
 
-* Each cycle produces a "release", spring (Nov-Apr), fall (May-Oct)
+* Each cycle ends with a new software release
 
-  - official QA, come with documentation
+  - releases are thorougly tested. They come with documentation
 
 
 People
@@ -85,19 +90,17 @@ People
 
 * DM Project Manager responsible for overall plan, schedule and priorities.
 
-* setting prioritiesand order of work is ultimately the responsibility of the DM Project Manager. De facto, that drives what is done in each cycle/release.
+* Work divided into smaller pieces, through WBS.
 
-* Delegates to TCAMs work within the teams they manage
+* Each piece has a dedicated technical manager.
 
-TCAMs Roles:
+* Main responsibilites of techical managers:
 
-* come up with up to date long term plan for the team
+  * Assemble the team capable of delivering work scoped through the WBS on-time and within budget. Provide daily technical management and leadership for the team, monitor and optimize team performance.
 
-* maintain the plan: adjust to changing needs, replan as resource availability changes
+  * Work closely with the DM Project Manager on defining short and long-term plan and schedule for their teams. Direct the execution of their teams's plan, ensuring the team delivers on-time and within budget.
 
-* come up with detailed, resouce loaded plan for each upcoming cycles
-
-* executing the short term plan, typically through sprints
+  * Report group's activities as required, including reporting to the Earned Value Management System (EVMS) used by LSST, and providing input for monthly status reports.
 
 
 .. _planning:
@@ -113,7 +116,7 @@ Cycle Planning
 
 * plan all 6 months
 
-  - detailed plan, resource loaded, non-LOE
+  - detailed plan for all non-LOE work, resource loaded
 
   - (describe spreadsheet here)
 
@@ -142,7 +145,6 @@ Cycle Planning
 
 * plan is verified and issues such "overloaded developers" are caught
 
-* plan captures all non-LOE activities
 
 
 Resource loading a cycle
@@ -154,23 +156,26 @@ Resource loading a cycle
 
 * adjusting to capture LOE time, eg, tcam spending 50% on non-coding
 
-* Adjusting to capture science time (20%)
+* adjusting to capture science time (20%)
 
 * applying 30% overhead for ...
 
-* left: xx h, = xx story points per FTE-month
+* left: xx h, = 26.3 story points per FTE-month
 
-* 1 FTE-month = 26 SPs
+* 1 FTE-month = 26.3 SPs
 
-* the size of the team determines the pool of available stories
+* the size of the team determines the pool of available story points
 
 * assigning available story points per developer
 
-* ok to show LOE activities but should not be part of epics with cycle (tracked by PMCS)
 
 
 Resource loading for bugs
 -------------------------
+
+.. warning::
+
+  this needs thinking
 
 There are two schools:
 
@@ -218,7 +223,7 @@ Sprints and Boards
 
 * avoid adding stories to sprint except blockers / crititical.
 
-* we will be looking at burndown charts every month
+* looking at burndown charts every month
 
 
 Keeping Plan Up-to-date
@@ -228,41 +233,19 @@ As the need to adjust the plan arises, we:
 
 * estimate scope and/or cost change
 
-* model it in the plan: add new epic(s) and/or milestone(s)
+* if the impact is small/moderate, we model it in the plan: add new epic(s) and/or milestone(s), re-schedule to make sure plan is not overloaded. Accumulated changes are submitted to CCB for approval semi-annually. Once approved, updated baseline is released.
 
-* re-schedule to make sure plan is not overloaded
-
-  - if it is a new scope, remove other scope if possible, or request contingency
-
-* obtain Change Control Board approval
-
-* semi-annually update and release a new baseline
+* if the impact is large CCB approval is seeked immediately
 
 
-Monitoring
------------
-
-* scripts for monitoring / flagging / alerting
-
-  - mark epics in progress when stories in progress/done
-
-  - sum of story points for all stories in epic significantly differs for epic SP estimate
-
-  - stories in progress for too long
-
-  - stories too large
-
-  - too many stories per developer in a month
-
-  - etc
 
 
 Tools
 =====
 
-* Master copy of milestones in PMCS
+* Master copy of all DM milestones in PMCS
 
-* Master copy of epics in JIRA DM project
+* Master copy of of all epics covering software-related work in JIRA DM project
 
 * For milestone-based drill down we use spreadsheet
   - generated monthly from PMCS, available online in shared space
@@ -279,11 +262,13 @@ Tools
   - Kevin will have tool to synchronize PMCS / JIRA DLP (both ways)
   - we are getting rid of meta-epics
 
-
-
 * JIRA DM project
 
   - tracks all non-LOE software work
+
+    + the master copy of all software activities in JIRA
+
+    + for hardware and network related activities, when convenient, master plan can be in PMCS, monthly exports to JIRA DLP. It is in particular important to export to DLP the milestones that block software development.
 
   - tracks all random tasks (eg tcams todo)
 
@@ -319,6 +304,20 @@ Tools
     + with live links to epics
 
     + drill down per wbs, per milestone level, per FY
+
+  - scripts for monitoring / flagging / alerting
+
+    + mark epics in progress when stories in progress/done
+
+    + sum of story points for all stories in epic significantly differs for epic SP estimate
+
+    + stories in progress for too long
+
+    + stories too large
+
+    + - too many stories per developer in a month
+
+    + etc
 
 
 JIRA
