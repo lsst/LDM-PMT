@@ -15,7 +15,7 @@ Change Record
 
 .. warning::
 
-  This is a very early and incomplete draft (more like a collection of thoughts and notes) to stimulate discussion. In particular, note that information does not flow as it should, for example, we are talking about jira, story points etc before they are properly introduced. This will all need to be fixed.
+  This is a very early and incomplete draft (more like a collection of thoughts and notes) to stimulate discussion. Also note that information does not flow as it should. This will all need to be fixed. Further, perhaps we want to keep this document at high level and push some things like jira best practices to some sort of lower level doc that is not under change control.
 
 
 .. _intro:
@@ -150,23 +150,21 @@ Cycle Planning
 Resource loading a cycle
 ------------------------
 
-* 1800 h/year
+For a typical full-time developer:
 
-* 150 per month
+* 1800 h/year, --> 150 h per month
 
-* adjusting to capture LOE time, eg, tcam spending 50% on non-coding
+* applying 30% overhead for meetings, ad-hoc discussions and various interruptions
 
-* adjusting to capture science time (20%)
+* left: 26.3 4-hour blocks (150*(1-30%)/5). These are considered "pure, interrupted blocks", which we call "story points". So, 1 FTE-month = 26.3 SPs
 
-* applying 30% overhead for ...
+* adjustments are made depending on actual availability, for example
 
-* left: xx h, = 26.3 story points per FTE-month
+  - a developer working at 50% will have ~13 SPs available in a month
 
-* 1 FTE-month = 26.3 SPs
+  - a TCAM who spends ~50% on managing the team will have 50%*(1-30%)*26.3 SPs available for pure, interrrupted work
 
-* the size of the team determines the pool of available story points
-
-* assigning available story points per developer
+  - scientists will typically spend 20% of their time on doing science, so a full time scientist will have 80% x 26.2 SPs available for coding.
 
 
 
@@ -190,6 +188,20 @@ Related reading:
 * http://programmers.stackexchange.com/questions/162145/story-points-for-bug-fixing-tasks-is-it-suitable-for-scrum
 
 * http://www.infoq.com/news/2011/01/story-points-to-bugs
+
+
+Special Cases
+-------------
+
+In some cases work can not be easily defined up front (for example, user support). For these cases, only an epic with clearly defined resources are allocated in each cycle. These resources are then used to perform work. Decisions which activities are done as part of current cycle, which activities are assigned to such epics in future cycles, and which activities have too-low priority to be fit into any of these epics are made while a cycle is in progress.
+
+Similar technique is applied for activities that require scientific research, which is often impossible to accurately predict. In the case of scientific research, clearly defined milestones are defined on the way to ensure progress is made as planned.
+
+
+Tracking Late Work
+------------------
+
+In situations where work defined in an epic has not been completed and the cycle comes to an end, the epic must be kept ("in progress"), e.g., it should not be marked "Done" until all the work covered through that epic has been completed. The cycle field should be appropriately adjusted to reflect when the epic will be worked on, typically it will be next cycle (but it does not have to be. Such epic will be triggering schedule variance for as long as the work is not complete and the epic is marked "Done".
 
 
 Sprints and Boards
@@ -236,8 +248,6 @@ As the need to adjust the plan arises, we:
 * if the impact is small/moderate, we model it in the plan: add new epic(s) and/or milestone(s), re-schedule to make sure plan is not overloaded. Accumulated changes are submitted to CCB for approval semi-annually. Once approved, updated baseline is released.
 
 * if the impact is large CCB approval is seeked immediately
-
-
 
 
 Tools
@@ -356,6 +366,24 @@ JIRA
 * exposing all relationships, especially dependencies that might block you. If there is no place to show dependency on, work with corresponding tcam and make sure it gets created
 
 * only assign a person to a story when it is known for sure that given person will be the one working on that story. In practice, names should be assigned to stories when planning resources for current/next cycle, or when something urgent/critical comes up, or when it is really trivial (< 0.5 SP). Otherwise leave as "Unassigned", unless there is only one and only expert that can handle a given story.
+
+JIRA / PMCS Integration
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. warning::
+
+  Kevin, please help us fill this section
+
+
+* Plan loaded to PMCS before cycle starts. Information used: epics keys, descriptions, story points, wbs
+
+* Snapshot taken monthly:
+
+ - start of epics ("epic status changed from "to do" to "in progress" or "done")
+
+ - completed epics (epics marked "Done")
+
+ - completed epics (stories marked "done")
 
 
 
