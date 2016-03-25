@@ -44,30 +44,23 @@ The baseline design and architecture of the DM subsystem is captured through a s
 
 These documents describes all work that needs to be done.
 
-Work is divided into smaller activities, called *epics*. All epics are resource-loaded. Execution of the work is tracked through *milestones* which mark specific deliverables along the project timeline.
+Work is divided into blocks, called "planning packages" (PP). Together, all the PPs capture all work to be done during constructure. All PPs are resource-loaded.
 
-Every non-trivial activity requiring few FTE-month work is explicitly captured. This leads to o(few hundred) milestones and o(thousand) epics.
+Further, work encapsulated into PPs can be divided into smaller activities, called *epics*. As with PPs, epics are resource-loaded. It is common to have detailed plan for PPs that are in the near future (more epics, more details inside epics), less details for PPs in more distant future.
+
+Execution of the work is tracked through *milestones* which mark specific deliverables along the project timeline.
+
+This leads to o(100) PPS, o(few hundred) milestones and o(thousand) epics.
 
 Each milestone has a **description**, and **due date**. It has no duration, and no resources assigned to it.
 
-Each epic has: a clear **scope and deliverable(s)**, **resource cost**, and an **end date**. It also tracks which section of which baseline document it addresses (this needs to be implemented). This simplifies verification whether all parts of the baseline have been captured in the plan.
+Each PP has: a clear **scope and deliverable(s)**, **resource cost**, and an **end date**. It also tracks which section of which baseline document it addresses (this needs to be implemented). This simplifies verification whether all parts of the baseline have been captured in the plan.
 
-There is a well defined relationship between epics and milestones: epics block milestones, milestones can block other milestones.
+There is a well defined relationship between PPs, epics and milestones: epics block PPs, and of course, the sum of work for all epics that are plart of a given PP must not exceed the total cost of work allocated for that PP. There is typically at least one milestone (at the end) for each PPs, but it is not uncommon to have several. The end date for epics that are part of a given PP must not be past the end of the last milestone for that PP. Milestones can block other milestones.
 
-The baseline plan (milestones and epics) is under change control. Every non-trivial adjustment to scope, cost or schedule requires approval of the CCB.
-
+The baseline plan (PPs and milestones) is under change control. It is stable. Every adjustment to scope, cost or schedule requires approval of the CCB. Changes to individual epics can be freely made at any time without any approvals. These changes however may not affect the PPs-based baseline, and if they do, they trigger a change request. This gives TCAMs agility and flexibility to adjust their plans, while we ensure the scope/cost/schedule is well controlled and managed.
 
 The baseline plan has been assembled using a mix of top-down and bottom-up analysis. Top-down analysis involved analyzing project-level requirements and risks, as well as the DM requirements and baseline architecture for all components of the DM subsystem. Bottom-up analysis involved analysing all activities that need to be done and estimating their cost through prototyping and research as needed. [footnote: major replanning undertaken 1 1/2 year after start of construction]
-
-Updating Baseline
-=================
-
-Small adjustments to the baseline can be made by TCAMs in agile way. This includes small changes to SPs, moving SPs between activities, changing dates etc. All such changes are tracked and revisited semi-annually. Impact on scope, cost and schedule is revisited and if it is above pre-set level, the changes are submitted to CCB.
-
-Major changes that have potential to significantly impact scope, cost of schedule need to be discussed at DMLT and approved by TCT before they can be implemented.
-
-This gives TCAMs agility and flexibility to adjust their plans, while we ensure the scope/cost/schedule is well controlled and managed.
-
 
 
 
@@ -76,13 +69,15 @@ This gives TCAMs agility and flexibility to adjust their plans, while we ensure 
 Cycles and Releases
 ===================
 
-* All work captured in the Baseline Plan is divided into 6-month "cycles"
+* Work is executed through 6-month "cycles"
 
 * Scope of each cycle is driven by the Baseline Plan, in particular by milestones.
 
 * Each cycle ends with a new software release
 
   - releases are thorougly tested. They come with documentation
+
+* Cycles are planned through epics.
 
 
 People
@@ -94,7 +89,7 @@ People
 
 * Each piece has a dedicated technical manager.
 
-* Main responsibilites of techical managers:
+* Main responsibilites of technical managers:
 
   * Assemble the team capable of delivering work scoped through the WBS on-time and within budget. Provide daily technical management and leadership for the team, monitor and optimize team performance.
 
@@ -102,6 +97,7 @@ People
 
   * Report group's activities as required, including reporting to the Earned Value Management System (EVMS) used by LSST, and providing input for monthly status reports.
 
+* In a sense, DM PM "owns" the overall baseline plan (PPs, milestones), and technical manager "own" epics.
 
 .. _planning:
 
