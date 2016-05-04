@@ -27,17 +27,19 @@ LSST is now in construction, funded through NSF MREFC. The planning process has
 to conform to all government standards and requirements, including mandated
 Risk and Earned Value Management System (EVMS).
 
-The team responsible for delivering the LSST DM Software is approaching 100 engineers and scientists, and is highly distributed geographically. It is essential
-all processes are robust
+The team responsible for delivering the LSST DM Software is approaching 100 engineers and
+scientists, and is highly distributed geographically. It is essential all processes are robust
 and clearly defined, and everyone understands how to apply them; what tools to use and how.
 
 The DM Software is large and complex, and will be writen over the entire period of
 the construction (7 years). To ensure the team delivers production-quality software
-that meets baseline specification on time and within budget, having a solid, realistic, resource-loaded, well maintained long-term plan is a must. Further,
+that meets baseline specification on time and within budget, having a solid, realistic,
+resource-loaded, well maintained long-term plan is a must. Further,
 appropriete tools and processes need to be in place to track the progress and
 execute the long-term plan.
 
-Using modern techniques, in particular the Agile Process is extremely useful in particular for short-term planning, managing short-term activities, and maximizing
+Using modern techniques, in particular the Agile Process is extremely useful in particular
+for short-term planning, managing short-term activities, and maximizing
 team's efficiency.
 
 The project planning processes described in this documents have been structured to
@@ -55,11 +57,17 @@ This section explains how the DM Subsystem approaches project planning and plan 
 Baseline Documents
 ------------------
 
-The baseline design and architecture of the DM Subsystem is captured through a set of change-controlled documents, including:
+The baseline design and architecture of the DM Subsystem is captured through a set of change-controlled
+documents, including:
+
+* LDM-148 DM System Design
 
 * LDM-151 DM Applications Design
+
 * LDM-152 DM Middleware Design
+
 * LDM-135 DM Database Design
+
 * LDM-131 DM SUI Conceptual Design
 
 The complete set of DM baseline documents can be found in Docushare, Collection-2511.
@@ -68,50 +76,75 @@ All together, this collection of documents capture all work DM has to deliver du
 
 Planning Packages
 -----------------
-The work is divided into *o(100)* concrete, technical *activities*. Each such activity addresses a piece of work defined in the baseline, and all together they cover the entire DM Baseline. Each activity has a clearly defined scope, deliverable(s), resource cost, and an end date. To ensure completeness and simplify cross-checking, each activity keeps track of which section(s) of which LDM baseline document it implements.
+The work is divided into *o(100)* concrete, technical *packages of planned work*. The packages divide work
+at the 3rd Level of WBS, e.g., typically a 3rd Level WBS is broken down into 10-20 packages. Each such package
+addresses a piece of work defined in the baseline, and all together they cover the entire DM Baseline.
+Each package has a clearly defined scope, deliverable(s), resource cost, and an end date. Additionally,
+each package keeps track of which section(s) of which baseline document it implements.
 
-In the EVMS world, activities are implemented directly as *Planning Packages* (PP).
+
+
+In the EVMS world, these packages are implemented directly as *Planning Packages* (PP).
 
 Milestones
 ----------
-All significant development stages of each activity are tracked through *milestones*. Each activity has at least one milestone, used to mark the completion of a given activity. It is not uncommon to have multiple milestones per activity to track progress along the way. Each milestone has a description, and due date; it has no duration, and no resources assigned to it.
+All significant development stages of each Planning Package are tracked through *milestones*.
+Each Planning Package has at least one milestone, used to mark the completion of a given Package.
+It is not uncommon to have multiple milestones per Package to track progress along the way.
+Each milestone has a description, and due date; it has no duration, and no resources assigned to it.
+
+Each activity within a Planning Package that involves a cross-team dependency is required to end with
+a milestone; this includes actvities related to delivering software components, hardware, and services.
 
 Further, milestones have *levels*:
 
 * Level 1 denotes the most important milestones exposed at the NSF level
+
 * Level 2 denotes cross-subsystem milestones (for example, DM milestone that affect the Camera Subsystem)
+
 * Level 3 denotes cross-team milestones within a subsystem (for example, Middleware milestone that effect the DRP Team)
-* Level 4 denotes internal milestones within a team
 
-O(few hundred) milestones have been defined to-date to track the progress of DM activities.
+* Level 4 denotes internal milestones within a team.
 
-Relationship between milestones, as well as between milestones and planning packages are captured: milestones *block* other milestones, milestones *relate* to planning packages.
+*O(few hundred)* milestones have been defined to-date to track the progress of DM activities.
+
+Relationship between milestones, as well as between milestones and planning packages are captured:
+milestones typically *block* planning packages, milestones can also *relate* to other milestones.
 
 Baseline Long-term Plan
 -----------------------
 
-Planning Packages, together with Milestones form the *Baseline Plan*. The plan is under change
-control.
+Planning Packages, together with Milestones form the *Baseline Plan*. The plan is under change control.
 
-The plan is stable, any change to the plan, including changing scope, cost or schedule must be approved by the appropriete change control body:
+The plan is stable, any change to the plan, including changing scope, cost or schedule must be approved
+by the appropriete change control body:
 
-* Change Control Board approval for any non-trivial change to Planning Package or Level1,
-  Level 2 and Level 3 milestones
-* DM's TCT approval for Level 4 milestones
+* Change Control Board approval for any non-trivial change to Planning Package or Level 1 and
+  Level 2 milestones
+
+* DM's TCT approval for Level 3 milestones
+
+* no approval is needed for Level 4 milestones, however any non-trivial change need to be communicate
+  within the DM team
+
 * trivial changes, such as small corrections / clarifications to narrative that do not affect
   scope, time or budget are allowed without approval.
 
-Typically, adjustments are made every 6 or 12 months.
+Typically, adjustments to Level 1, 2 and 3 milestons are made every 6 or 12 months. Changes to Level 4
+milestones can occur more frequently.
 
 Short-term Planning
 -------------------
 
 Short-term Plan is managed through *epics* and *stories*, and executed through *cycles*.
 
+In the EVMS world, epics map directly to *activities*, and stories map to *activity steps*.
+
 Epics and Stories
 ~~~~~~~~~~~~~~~~~
 
-Typically, Planning Packages emcompass large blocks of work. To plan and execute work in details, finer-grain planning is required. This is implemented through epics and stories.
+Typically, Planning Packages emcompass large blocks of work. To plan and execute work in details,
+finer-grain planning is required. This is implemented through epics and stories.
 
 Each epic captures a non-trivial work that is associated with a subset of work defined in a
 Planning Package. Each epic has a clear description, well defined deliverables, and
@@ -120,6 +153,11 @@ relationships with a Planning Package (an epic *implements* a PP), and a Milesto
 
 Each epic is broken into smaller chunks of work, called *Stories*. Stories are primarily used
 to define and manage short-term activities of individual developers.
+
+Epics and stories are used to track all software work, as well as work on delivering hardware and
+services that are tightly coupled with software (example: "Deliver OpenStack-based Test Cluster
+running RedHat 6.1".) Details of work on stand-alone activities do not have to be captured on daily bases
+through stories (example: "Deliver 10Gbit link between Chile and USA")
 
 .. _cycles-and-releases:
 
@@ -133,8 +171,8 @@ thorougly tested and documented.
 Cycles are planned through *epics*. Each epic must be defined such that it can be completed
 within a single cycle.
 
-Once a plan is defined for a given cycle, it is loaded into PMCS and changed-controlled. A plan for a cycle is loaded to PMCS during the month proceeding the
-start of the cycle.
+Once a plan is defined for a given cycle, it is loaded into PMCS and changed-controlled. A plan for
+a cycle is loaded to PMCS during the month proceeding the start of the cycle.
 
 Any non-trivial adjustements to the plan that affect scope, schedule or budget must be approved
 by CCB.
@@ -150,8 +188,8 @@ Epics-based Long-term Planning
 
 As explained above, epics are used for planning and executing work within a cycle.
 
-In addition to that, epics are also extremely valuable for longer-term planning at a fine-grain level. When details
-of work for a given planning package are known, they can and should be captured through
+In addition to that, epics are also extremely valuable for longer-term planning at a fine-grain level.
+When details of work for a given planning package are known, they can and should be captured through
 epics. Such epics can be freely created and changed at any time without any approvals. They
 should, of course, fit within the scope and budget of related PP. They can be useful for
 bottom-up analysis and validation of resources needed to implement a given PP. This allows
@@ -159,11 +197,25 @@ to do detailed planning in flexible and agile way, while ensuring the scope/cost
 well controlled and managed.
 
 Level of Effort
-===============
+---------------
 
-For planning purposes, 70% of available time of each developer is assumed to be
-available for "pure, uninterrupted codding" the remaining 30% is considered as
-"overhead", and tracked explicitly as LOE.
+Two general rules are applied for the DM Team labor when determining whether an activity should be
+treated as LOE or non-LOE:
+
+* All activities that have a clear deliverable are tracked through non-LOE. Examples of non-LOE
+  activities include writing a new piece of software, purchasing new equipment, or adding new
+  machines to the cluster.
+
+* Activities that can not be predicted, as well as short, recurring routine activities are considered LOE.
+  Examples of LOE activities include replacing faulty disk drive, cluster maintenance, or writing monthly
+  status report.
+
+For planning purposes, 70% of available time of each software developer is assumed to be available
+for "pure, uninterrupted coding", and the remaining 30% is considered as "overhead", and tracked
+explicitly as LOE.
+
+A small fraction of all DM labor is performed by Contractors. The contractor labor is managed as LOE,
+directly in dollars.
 
 People
 ======
@@ -176,11 +228,14 @@ People
 
 * Main responsibilites of technical managers:
 
-  * Assemble the team capable of delivering work scoped through the WBS on-time and within budget. Provide daily technical management and leadership for the team, monitor and optimize team performance.
+  * Assemble the team capable of delivering work scoped through the WBS on-time and within budget.
+    Provide daily technical management and leadership for the team, monitor and optimize team performance.
 
-  * Work closely with the DM Project Manager on defining short and long-term plan and schedule for their teams. Direct the execution of their teams's plan, ensuring the team delivers on-time and within budget.
+  * Work closely with the DM Project Manager on defining short and long-term plan and schedule for
+    their teams. Direct the execution of their teams's plan, ensuring the team delivers on-time and within budget.
 
-  * Report group's activities as required, including reporting to the Earned Value Management System (EVMS) used by LSST, and providing input for monthly status reports.
+  * Report group's activities as required, including reporting to the Earned Value Management System (EVMS)
+    used by LSST, and providing input for monthly status reports.
 
 * In a sense, DM PM "owns" the overall baseline plan (PPs, milestones), and technical manager "own" epics.
 
@@ -192,8 +247,13 @@ Master copy of the Baseline Plan, which includes all planning packages and all
 milestones is captured in Primavera. A copy of that information is kept in JIRA
 DLP project. It is periodically synchronized with Primavera.
 
-Master copy of Epics and Stories are kept in JIRA in DM project. The snaphot for
+Master copy of Epics and Stories is kept in JIRA in DM project. The snaphot for
 epics corresponding to current and upcoming Cycle is taken and kept in Primavera.
+
+Information in JIRA for current Cycle is particularly important, it needs to be
+kept up-to-date and it should reflect the current state of the progress. Progress
+updates for activities that block other teams, in particular when the delivery date
+approaches are expected to be done promptly (depending on urgency, weekly or even daily)
 
 Keeping a copy Baseline Plan in JIRA is in particular useful for linking the PPs
 with corresponding Epics.
@@ -253,7 +313,7 @@ Resource loading a cycle
 
 For a typical full-time developer:
 
-* 1800 h/year, --> 150 h per month
+* 1800 h/year to allow for vacation, sick, holidays, --> 150 h per month
 
 * applying 30% overhead for meetings, ad-hoc discussions and various interruptions
 
@@ -268,6 +328,11 @@ For a typical full-time developer:
   - scientists will typically spend 20% of their time on doing science, so a full time scientist will have 80% x 26.2 SPs available for coding.
 
 
+Cross-team work
+---------------
+
+* developers from team A can be assigned to work under WBS that belongs to team B, both TCAMs need to agree. If known ahead of time, it should be captured in the plan and resources from team A should be assigned to WBS of team B.
+* TCAMs can occasionally "trade" small pieces of work.
 
 Resource loading for bugs
 -------------------------
@@ -302,7 +367,7 @@ Similar technique is applied for activities that require scientific research, wh
 Tracking Late Work
 ------------------
 
-In situations where work defined in an epic has not been completed and the cycle comes to an end, the epic must be kept ("in progress"), e.g., it should not be marked "Done" until all the work covered through that epic has been completed. The cycle field should be appropriately adjusted to reflect when the epic will be worked on, typically it will be next cycle (but it does not have to be. Such epic will be triggering schedule variance for as long as the work is not complete and the epic is marked "Done".
+In situations where work defined in an epic has not been completed and the cycle comes to an end, the epic must be kept ("in progress"), e.g., it should not be marked "Done" until all the work covered through that epic has been completed. The cycle field should be appropriately adjusted to reflect when the epic will be worked on, typically it will be next cycle (but it does not have to be. Such epic will be triggering schedule variance for as long as the work is not complete and until the epic is marked "Done".
 
 
 Sprints and Boards
@@ -349,6 +414,8 @@ As the need to adjust the plan arises, we:
 * if the impact is small/moderate, we model it in the plan: add new epic(s) and/or milestone(s), re-schedule to make sure plan is not overloaded. Accumulated changes are submitted to CCB for approval semi-annually. Once approved, updated baseline is released.
 
 * if the impact is large CCB approval is seeked immediately
+
+* Need ot iscuss when to add new story to existing epic, when to add new epic, is if ever okay to change a story etc
 
 
 Tools
@@ -431,6 +498,9 @@ Tools
     + etc
 
 
+Jeff mentioned that "Linked epic-based tool does not provide latest full LDM-240 table view (i.e. for all WBS, by WBS, by cycle (not FY)).  Make sure other scripts work for this and dependency graph views."
+
+
 JIRA
 ~~~~
 
@@ -468,6 +538,8 @@ JIRA
 
 * only assign a person to a story when it is known for sure that given person will be the one working on that story. In practice, names should be assigned to stories when planning resources for current/next cycle, or when something urgent/critical comes up, or when it is really trivial (< 0.5 SP). Otherwise leave as "Unassigned", unless there is only one and only expert that can handle a given story.
 
+* standalone non-software activities and LOE not reflected by epics and stories in JIRA DM, only in JIRA DLP and PMCS.
+
 JIRA / PMCS Integration
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -504,6 +576,7 @@ JIRA Best Practices
 
 JIRA and current cycle plan in PMCS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 * All epics that are part of current cycle are considered "PMCS-locked".
   That means changes to scope (eg, description) and resources (eg story points)
   can only be made by the TCAM responsible for given epic (typically with
