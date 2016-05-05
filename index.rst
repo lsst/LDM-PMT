@@ -124,8 +124,8 @@ by the appropriete change control body:
 
 * DM's TCT approval for Level 3 milestones
 
-* no approval is needed for Level 4 milestones, however any non-trivial change need to be communicate
-  within the DM team
+* no approval is needed for Level 4 milestones, however any non-trivial change need to be communicated
+  to the DM team
 
 * trivial changes, such as small corrections / clarifications to narrative that do not affect
   scope, time or budget are allowed without approval.
@@ -156,8 +156,8 @@ to define and manage short-term activities of individual developers.
 
 Epics and stories are used to track all software work, as well as work on delivering hardware and
 services that are tightly coupled with software (example: "Deliver OpenStack-based Test Cluster
-running RedHat 6.1".) Details of work on stand-alone activities do not have to be captured on daily bases
-through stories (example: "Deliver 10Gbit link between Chile and USA")
+running RedHat 6.1".) Details of work on standalone activities do not have to be captured on daily
+bases through stories (example: "Deliver 10Gbit link between Chile and USA")
 
 .. _cycles-and-releases:
 
