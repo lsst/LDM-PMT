@@ -339,22 +339,19 @@ Resource loading for bugs
 
 .. warning::
 
-  this needs thinking
+   this needs to be discussed
 
-There are two schools:
+* we need to have strict acceptance criteria / assessment process.
 
-* bugs should have story points. This helps to understand real velocity
+* we need to budget for testing/validation
 
-* bugs should not have stories points because developers already earned value for completing the story that led to the bug, and they should not receive more points for it, they shouldn't have earned the points to begin with
+* Each epic should clearly state how given work will be tested (whenever applicable)
 
-(need to decide, Camera Team does the later. I am leaning towards the former, reserving reasonable number of story points in the long-term plan for bug fixes, carefully tracking story points used for bug fixes in each cycle, and adjusting the planned number of story points for bug fixes in future cycles based on findings)
+* We should budget reasonable % of time (30%?) for fixing bugs in software
+  that passed acceptable criteria and it is mark "done". This should
+  be treated as EV, tracked through SPs.
 
-Related reading:
-
-* http://programmers.stackexchange.com/questions/162145/story-points-for-bug-fixing-tasks-is-it-suitable-for-scrum
-
-* http://www.infoq.com/news/2011/01/story-points-to-bugs
-
+* The above 30% is for fixing urgent bugs, and code maintenance / refactoring
 
 Special Cases
 -------------
