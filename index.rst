@@ -10,7 +10,7 @@ Change Record
 +-------------+------------+----------------------------------+-----------------+
 | **Version** | **Date**   | **Description**                  | **Owner**       |
 +=============+============+==================================+=================+
-| 0.1         | 4/28/2016  | Initial version.                 | Jacek Becla     |
+| 1.0         | 6/11/2016  | First version.                   | Jacek Becla     |
 +-------------+------------+----------------------------------+-----------------+
 
 
@@ -68,7 +68,7 @@ documents, including:
 
 * LDM-135 DM Database Design
 
-* LDM-131 DM SUI Conceptual Design
+* LDM-131 DM SUIT Conceptual Design
 
 The complete set of DM baseline documents can be found in Docushare, Collection-2511.
 
@@ -76,8 +76,8 @@ All together, this collection of documents capture all work DM has to deliver du
 
 Planning Packages
 -----------------
-The work is divided into *o(100)* concrete, technical *packages of planned work*. The packages divide work
-at the 3rd Level of WBS, e.g., typically a 3rd Level WBS is broken down into 10-20 packages. Each such package
+The work is divided into *o(few hundred)* concrete, technical *packages of planned work*. The packages divide work
+at the 3rd Level of WBS, e.g., typically a 3rd Level WBS is broken down into 20-50 packages. Each such package
 addresses a piece of work defined in the baseline, and all together they cover the entire DM Baseline.
 Each package has a clearly defined scope, deliverable(s), resource cost, and an end date. Additionally,
 each package keeps track of which section(s) of which baseline document it implements.
@@ -88,13 +88,16 @@ In the EVMS world, these packages are implemented directly as *Planning Packages
 
 Milestones
 ----------
-All significant development stages of each Planning Package are tracked through *milestones*.
-Each Planning Package has at least one milestone, used to mark the completion of a given Package.
+All significant development stages of each planning package are tracked through *milestones*.
+Each planning package has at least one milestone, used to mark the completion of a given Package.
 It is not uncommon to have multiple milestones per Package to track progress along the way.
+Milestones can be related to multiple lanning packages, potentially from different WBSes.
 Each milestone has a description, and due date; it has no duration, and no resources assigned to it.
+It is not uncommon for a milestone to related to multiple planning packages, possibly from
+different WBSes.
 
-Each activity within a Planning Package that involves a cross-team dependency is required to end with
-a milestone; this includes actvities related to delivering software components, hardware, and services.
+Each activity within a planning package that involves a cross-team dependency is required to end with
+a milestone; this includes activities related to delivering software components, hardware, and services.
 
 Further, milestones have *levels*:
 
@@ -114,13 +117,13 @@ milestones typically *block* planning packages, milestones can also *relate* to 
 Baseline Long-term Plan
 -----------------------
 
-Planning Packages, together with Milestones form the *Baseline Plan*. The plan is under change control.
+Planning packages, together with Milestones form the *Baseline Plan*. The plan is under change control.
 
 The plan is stable, any change to the plan, including changing scope, cost or schedule must be approved
 by the appropriete change control body:
 
-* Change Control Board approval for any non-trivial change to Planning Package or Level 1 and
-  Level 2 milestones
+* Change Control Board approval for any non-trivial change to a planning package or Level 1 and
+  Level 2 milestone
 
 * DM's TCT approval for Level 3 milestones
 
@@ -143,12 +146,12 @@ In the EVMS world, epics map directly to *activities*, and stories map to *activ
 Epics and Stories
 ~~~~~~~~~~~~~~~~~
 
-Typically, Planning Packages emcompass large blocks of work. To plan and execute work in details,
-finer-grain planning is required. This is implemented through epics and stories.
+Typically, planning packages emcompass relatively large blocks of work. To plan and execute work
+in details, finer-grain planning is required. This is implemented through epics and stories.
 
 Each epic captures a non-trivial work that is associated with a subset of work defined in a
-Planning Package. Each epic has a clear description, well defined deliverables, and
-relationships with a Planning Package (an epic *implements* a PP), and a Milestone (an epic
+planning package. Each epic has a clear description, well defined deliverables, and
+relationships with a planning package (an epic *implements* a PP), and a Milestone (an epic
 *blocks* a milestone). Epics are resources loaded, and have start and end dates defined.
 
 Each epic is broken into smaller chunks of work, called *Stories*. Stories are primarily used
@@ -243,11 +246,14 @@ People
 Tools
 =====
 
-Master copy of the Baseline Plan, which includes all planning packages and all
-milestones is captured in Primavera. A copy of that information is kept in JIRA
-DLP project. It is periodically synchronized with Primavera.
+Master copy of the Baseline Plan, which includes all planning packages and all milestones is captured
+in Primavera. This is always the authorative source of truth for the Baseline Plan.
 
-Master copy of Epics and Stories is kept in JIRA in DM project. The snaphot for
+Information about milestones is also kept in JIRA DM Baseline Plan (DMBP) project, and is periodically
+synchronized with Primavera. Having milestones in JIRA is in particular useful for expressing blocking
+relations between milestones and epics between different teams.
+
+Master copy of Epics and Stories is kept in JIRA "DM" project. The snaphot for
 epics corresponding to current and upcoming Cycle is taken and kept in Primavera.
 
 Information in JIRA for current Cycle is particularly important, it needs to be
@@ -255,10 +261,8 @@ kept up-to-date and it should reflect the current state of the progress. Progres
 updates for activities that block other teams, in particular when the delivery date
 approaches are expected to be done promptly (depending on urgency, weekly or even daily)
 
-Keeping a copy Baseline Plan in JIRA is in particular useful for linking the PPs
-with corresponding Epics.
 
-The JIRA DLP serves as an easy-to-use interface TCAMs can use to interact with
+The JIRA DMBP serves as an easy-to-use interface TCAMs can use to interact with
 the Baseline Plan. Changes made to the JIRA DLP are periodically submitted to CCB
 and transfered to the Primavera once approved (every 6 or 12 month). Primavera
 version is always the authoritative source of truth.
