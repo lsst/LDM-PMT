@@ -31,11 +31,11 @@ The team responsible for delivering the LSST DM Software is approaching 100 engi
 scientists, and is highly distributed geographically. It is essential all processes are robust
 and clearly defined, and everyone understands how to apply them; what tools to use and how.
 
-The DM Software is large and complex, and will be writen over the entire period of
+The DM Software is large and complex, and will be written over the entire period of
 the construction (7 years). To ensure the team delivers production-quality software
 that meets baseline specification on time and within budget, having a solid, realistic,
 resource-loaded, well maintained long-term plan is a must. Further,
-appropriete tools and processes need to be in place to track the progress and
+appropriate tools and processes need to be in place to track the progress and
 execute the long-term plan.
 
 Using modern techniques, in particular the Agile Process is extremely useful in particular
@@ -91,7 +91,7 @@ Milestones
 All significant development stages of each planning package are tracked through *milestones*.
 Each planning package has at least one milestone, used to mark the completion of a given Package.
 It is not uncommon to have multiple milestones per Package to track progress along the way.
-Milestones can be related to multiple lanning packages, potentially from different WBSes.
+Milestones can be related to multiple planning packages, potentially from different WBSes.
 Each milestone has a description, and due date; it has no duration, and no resources assigned to it.
 It is not uncommon for a milestone to related to multiple planning packages, possibly from
 different WBSes.
@@ -120,7 +120,7 @@ Baseline Long-term Plan
 Planning packages, together with Milestones form the *Baseline Plan*. The plan is under change control.
 
 The plan is stable, any change to the plan, including changing scope, cost or schedule must be approved
-by the appropriete change control body:
+by the appropriate change control body:
 
 * Change Control Board approval for any non-trivial change to a planning package or Level 1 and
   Level 2 milestone
@@ -133,7 +133,7 @@ by the appropriete change control body:
 * trivial changes, such as small corrections / clarifications to narrative that do not affect
   scope, time or budget are allowed without approval.
 
-Typically, adjustments to Level 1, 2 and 3 milestons are made every 6 or 12 months. Changes to Level 4
+Typically, adjustments to Level 1, 2 and 3 milestones are made every 6 or 12 months. Changes to Level 4
 milestones can occur more frequently.
 
 Short-term Planning
@@ -146,7 +146,7 @@ In the EVMS world, epics map directly to *activities*, and stories map to *activ
 Epics and Stories
 ~~~~~~~~~~~~~~~~~
 
-Typically, planning packages emcompass relatively large blocks of work. To plan and execute work
+Typically, planning packages encompass relatively large blocks of work. To plan and execute work
 in details, finer-grain planning is required. This is implemented through epics and stories.
 
 Each epic captures a non-trivial work that is associated with a subset of work defined in a
@@ -169,7 +169,7 @@ Cycles and Releases
 
 The work is executed through 6-month *cycles*. Scope of work for each cycle is driven by the Baseline
 Plan, in particular by milestones. Each cycle ends with a new software release. Releases are
-thorougly tested and documented.
+thoroughly tested and documented.
 
 Cycles are planned through *epics*. Each epic must be defined such that it can be completed
 within a single cycle.
@@ -177,7 +177,7 @@ within a single cycle.
 Once a plan is defined for a given cycle, it is loaded into PMCS and changed-controlled. A plan for
 a cycle is loaded to PMCS during the month proceeding the start of the cycle.
 
-Any non-trivial adjustements to the plan that affect scope, schedule or budget must be approved
+Any non-trivial adjustments to the plan that affect scope, schedule or budget must be approved
 by CCB.
 
 It is acceptable to load the plan in 3-month chunks, e.g., the plan for
@@ -229,7 +229,7 @@ People
 
 * Each piece has a dedicated technical manager.
 
-* Main responsibilites of technical managers:
+* Main responsibilities of technical managers:
 
   * Assemble the team capable of delivering work scoped through the WBS on-time and within budget.
     Provide daily technical management and leadership for the team, monitor and optimize team performance.
@@ -247,13 +247,13 @@ Tools
 =====
 
 Master copy of the Baseline Plan, which includes all planning packages and all milestones is captured
-in Primavera. This is always the authorative source of truth for the Baseline Plan.
+in Primavera. This is always the authoritative source of truth for the Baseline Plan.
 
 Information about milestones is also kept in JIRA DM Baseline Plan (DMBP) project, and is periodically
 synchronized with Primavera. Having milestones in JIRA is in particular useful for expressing blocking
 relations between milestones and epics between different teams.
 
-Master copy of Epics and Stories is kept in JIRA "DM" project. The snaphot for
+Master copy of Epics and Stories is kept in JIRA "DM" project. The snapshot for
 epics corresponding to current and upcoming Cycle is taken and kept in Primavera.
 
 Information in JIRA for current Cycle is particularly important, it needs to be
@@ -264,7 +264,7 @@ approaches are expected to be done promptly (depending on urgency, weekly or eve
 
 The JIRA DMBP serves as an easy-to-use interface TCAMs can use to interact with
 the Baseline Plan. Changes made to the JIRA DLP are periodically submitted to CCB
-and transfered to the Primavera once approved (every 6 or 12 month). Primavera
+and transferred to the Primavera once approved (every 6 or 12 month). Primavera
 version is always the authoritative source of truth.
 
 .. image:: baselinePlanDiagram.png
