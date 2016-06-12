@@ -266,3 +266,9 @@ The JIRA DMBP serves as an easy-to-use interface TCAMs can use to interact with
 the Baseline Plan. Changes made to the JIRA DLP are periodically submitted to CCB
 and transfered to the Primavera once approved (every 6 or 12 month). Primavera
 version is always the authoritative source of truth.
+
+.. image:: baselinePlanDiagram.png
+
+
+The above diagram summarizes what needs to be approved by CCB, what is stored in
+Primavera, and what is stored in JIRA.
