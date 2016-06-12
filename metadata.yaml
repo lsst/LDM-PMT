@@ -4,5 +4,5 @@ copyright: '2016, AURA/LSST'
 authors:
     - Jacek Becla
 # Current document version
-last_revised: 'April 28, 2016'
-version: '0.1.dev'
+last_revised: 'June 11, 2016'
+version: '1.0.prod'
