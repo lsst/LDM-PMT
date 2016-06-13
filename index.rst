@@ -20,8 +20,8 @@ Change Record
 Introduction
 ============
 
-This document describes the project planning processes and tools used in the DM,
-with particular emphasis on software development.
+This document describes the project planning processes and tools used in the
+DM Subsystem, with particular emphasis on software development.
 
 LSST is now in construction, funded through NSF MREFC. The planning process has
 to conform to all government standards and requirements, including mandated
@@ -33,14 +33,14 @@ and clearly defined, and everyone understands how to apply them; what tools to u
 
 The DM Software is large and complex, and will be written over the entire period of
 the construction (7 years). To ensure the team delivers production-quality software
-that meets baseline specification on time and within budget, having a solid, realistic,
+that meets the baseline specification on time and within budget, having a solid, realistic,
 resource-loaded, well maintained long-term plan is a must. Further,
 appropriate tools and processes need to be in place to track the progress and
 execute the long-term plan.
 
-Using modern techniques, in particular the Agile Process is extremely useful in particular
+Using modern techniques, in particular the Agile Process, is extremely useful in particular
 for short-term planning, managing short-term activities, and maximizing
-team's efficiency.
+the team's efficiency.
 
 The project planning processes described in this documents have been structured to
 address all of the above (often not fully aligned!) needs. It is a fusion of
@@ -89,8 +89,8 @@ In the EVMS world, these packages are implemented directly as *Planning Packages
 Milestones
 ----------
 All significant development stages of each planning package are tracked through *milestones*.
-Each planning package has at least one milestone, used to mark the completion of a given Package.
-It is not uncommon to have multiple milestones per Package to track progress along the way.
+Each planning package has at least one milestone, used to mark the completion of a given package.
+It is not uncommon to have multiple milestones per package to track progress along the way.
 Milestones can be related to multiple planning packages, potentially from different WBSes.
 Each milestone has a description, and due date; it has no duration, and no resources assigned to it.
 It is not uncommon for a milestone to related to multiple planning packages, possibly from
@@ -103,9 +103,9 @@ Further, milestones have *levels*:
 
 * Level 1 denotes the most important milestones exposed at the NSF level
 
-* Level 2 denotes cross-subsystem milestones (for example, DM milestone that affect the Camera Subsystem)
+* Level 2 denotes cross-subsystem milestones (for example, DM milestones that affect the Camera Subsystem)
 
-* Level 3 denotes cross-team milestones within a subsystem (for example, Middleware milestone that effect the DRP Team)
+* Level 3 denotes cross-team milestones within a subsystem (for example, Middleware milestones that effect the DRP Team)
 
 * Level 4 denotes internal milestones within a team.
 
@@ -114,12 +114,12 @@ Further, milestones have *levels*:
 Relationship between milestones, as well as between milestones and planning packages are captured:
 milestones typically *block* planning packages, milestones can also *relate* to other milestones.
 
-Baseline Long-term Plan
+Baseline Long-Term Plan
 -----------------------
 
-Planning packages, together with Milestones form the *Baseline Plan*. The plan is under change control.
+Planning packages, together with milestones form the *Baseline Plan*. The plan is under change control.
 
-The plan is stable, any change to the plan, including changing scope, cost or schedule must be approved
+The plan is stable. Any change to the plan, including changing scope, cost or schedule, must be approved
 by the appropriate change control body:
 
 * Change Control Board approval for any non-trivial change to a planning package or Level 1 and
@@ -127,7 +127,7 @@ by the appropriate change control body:
 
 * DM's TCT approval for Level 3 milestones
 
-* no approval is needed for Level 4 milestones, however any non-trivial change need to be communicated
+* no approval is needed for Level 4 milestones, however any non-trivial change must be communicated
   to the DM team
 
 * trivial changes, such as small corrections / clarifications to narrative that do not affect
@@ -136,10 +136,10 @@ by the appropriate change control body:
 Typically, adjustments to Level 1, 2 and 3 milestones are made every 6 or 12 months. Changes to Level 4
 milestones can occur more frequently.
 
-Short-term Planning
+Short-Term Planning
 -------------------
 
-Short-term Plan is managed through *epics* and *stories*, and executed through *cycles*.
+The short-term plan is managed through *epics* and *stories*, and executed through *cycles*.
 
 In the EVMS world, epics map directly to *activities*, and stories map to *activity steps*.
 
@@ -151,11 +151,11 @@ in details, finer-grain planning is required. This is implemented through epics 
 
 Each epic captures a non-trivial work that is associated with a subset of work defined in a
 planning package. Each epic has a clear description, well defined deliverables, and
-relationships with a planning package (an epic *implements* a PP), and a Milestone (an epic
-*blocks* a milestone). Epics are resources loaded, and have start and end dates defined.
+relationships with a planning package (an epic *implements* a PP), and a milestone (an epic
+*blocks* a milestone). Epics are resource loaded, and have start and end dates defined.
 
-Each epic is broken into smaller chunks of work, called *Stories*. Stories are primarily used
-to define and manage short-term activities of individual developers.
+Each epic is broken into smaller chunks of work, called *stories*. Stories are primarily used
+to define and manage the short-term activities of individual developers.
 
 Epics and stories are used to track all software work, as well as work on delivering hardware and
 services that are tightly coupled with software (example: "Deliver OpenStack-based Test Cluster
@@ -167,8 +167,8 @@ bases through stories (example: "Deliver 10Gbit link between Chile and USA")
 Cycles and Releases
 ~~~~~~~~~~~~~~~~~~~
 
-The work is executed through 6-month *cycles*. Scope of work for each cycle is driven by the Baseline
-Plan, in particular by milestones. Each cycle ends with a new software release. Releases are
+The work is executed through 6-month *cycles*. The scope of work for each cycle is driven by the
+Baseline Plan, in particular by milestones. Each cycle ends with a new software release. Releases are
 thoroughly tested and documented.
 
 Cycles are planned through *epics*. Each epic must be defined such that it can be completed
@@ -191,7 +191,7 @@ Epics-based Long-term Planning
 
 As explained above, epics are used for planning and executing work within a cycle.
 
-In addition to that, epics are also extremely valuable for longer-term planning at a fine-grain level.
+In addition to that, epics are also extremely valuable for longer-term planning at a fine-grained level.
 When details of work for a given planning package are known, they can and should be captured through
 epics. Such epics can be freely created and changed at any time without any approvals. They
 should, of course, fit within the scope and budget of related PP. They can be useful for
@@ -217,7 +217,7 @@ For planning purposes, 70% of available time of each software developer is assum
 for "pure, uninterrupted coding", and the remaining 30% is considered as "overhead", and tracked
 explicitly as LOE.
 
-A small fraction of all DM labor is performed by Contractors. The contractor labor is managed as LOE,
+A small fraction of all DM labor is performed by contractors. The contractor labor is managed as LOE,
 directly in dollars.
 
 People
@@ -246,25 +246,25 @@ People
 Tools
 =====
 
-Master copy of the Baseline Plan, which includes all planning packages and all milestones is captured
+The master copy of the Baseline Plan, which includes all planning packages and all milestones is captured
 in Primavera. This is always the authoritative source of truth for the Baseline Plan.
 
 Information about milestones is also kept in JIRA DM Baseline Plan (DMBP) project, and is periodically
-synchronized with Primavera. Having milestones in JIRA is in particular useful for expressing blocking
-relations between milestones and epics between different teams.
+synchronized with Primavera. Having milestones in JIRA is, in particular, useful for expressing blocking
+relationships between milestones and epics between different teams.
 
-Master copy of Epics and Stories is kept in JIRA "DM" project. The snapshot for
-epics corresponding to current and upcoming Cycle is taken and kept in Primavera.
+The master set of epics and stories is kept in JIRA "DM" project. Epics corresponding to the current
+and upcoming cycles are snapshotted and loaded to Primavera.
 
-Information in JIRA for current Cycle is particularly important, it needs to be
-kept up-to-date and it should reflect the current state of the progress. Progress
+Information in JIRA for the current cycle is particularly important: it needs to be
+kept up-to-date and it should reflect the current state of development. Progress
 updates for activities that block other teams, in particular when the delivery date
-approaches are expected to be done promptly (depending on urgency, weekly or even daily)
+approaches, are expected to be provided promptly (depending on urgency, weekly or even daily)
 
 
-The JIRA DMBP serves as an easy-to-use interface TCAMs can use to interact with
+The JIRA DMBP serves as an easy-to-use interface that TCAMs can use to interact with
 the Baseline Plan. Changes made to the JIRA DLP are periodically submitted to CCB
-and transferred to the Primavera once approved (every 6 or 12 month). Primavera
+and transferred to the Primavera when approved (every 6 or 12 month). The Primavera
 version is always the authoritative source of truth.
 
 .. image:: baselinePlanDiagram.png
