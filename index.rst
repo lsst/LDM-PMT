@@ -235,7 +235,7 @@ People
     Provide daily technical management and leadership for the team, monitor and optimize team performance.
 
   * Work closely with the DM Project Manager on defining short and long-term plan and schedule for
-    their teams. Direct the execution of their teams's plan, ensuring the team delivers on-time and within budget.
+    their teams. Direct the execution of their team's plan, ensuring the team delivers on-time and within budget.
 
   * Report group's activities as required, including reporting to the Earned Value Management System (EVMS)
     used by LSST, and providing input for monthly status reports.
