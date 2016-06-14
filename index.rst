@@ -186,19 +186,6 @@ part of the plan covering the last 3 months is loaded before the 4th month start
 allows for minor fine-tuning of the second half of the cycle without going through the CCB
 approval.
 
-Epics-based Long-term Planning
-------------------------------
-
-As explained above, epics are used for planning and executing work within a cycle.
-
-In addition to that, epics are also extremely valuable for longer-term planning at a fine-grained level.
-When details of work for a given planning package are known, they can and should be captured through
-epics. Such epics can be freely created and changed at any time without any approvals. They
-should, of course, fit within the scope and budget of related PP. They can be useful for
-bottom-up analysis and validation of resources needed to implement a given PP. This allows
-to do detailed planning in flexible and agile way, while ensuring the scope/cost/schedule is
-well controlled and managed.
-
 Level of Effort
 ---------------
 
