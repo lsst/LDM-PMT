@@ -25,7 +25,7 @@ DM Subsystem, with particular emphasis on software development.
 
 LSST is now in construction, funded through NSF MREFC. The planning process has
 to conform to all government standards and requirements, including mandated
-Risk and Earned Value Management System (EVMS).
+Earned Value Management System (EVMS).
 
 The team responsible for delivering the LSST DM Software is approaching 100 engineers and
 scientists, and is highly distributed geographically. It is essential all processes are robust
@@ -77,8 +77,8 @@ All together, this collection of documents capture all work DM has to deliver du
 Planning Packages
 -----------------
 The work is divided into *o(few hundred)* concrete, technical *packages of planned work*. The packages divide work
-at the 3rd Level of WBS, e.g., typically a 3rd Level WBS is broken down into 20-50 packages. Each such package
-addresses a piece of work defined in the baseline, and all together they cover the entire DM Baseline.
+at the 4th Level of WBS, e.g., typically a 4th Level WBS is broken down into 20-50 packages. Each such package
+addresses a piece of work defined in the baseline documents, and all together they cover the entire DM baseline.
 Each package has a clearly defined scope, deliverable(s), resource cost, and an end date. Additionally,
 each package keeps track of which section(s) of which baseline document it implements.
 
@@ -112,7 +112,8 @@ Further, milestones have *levels*:
 *O(few hundred)* milestones have been defined to-date to track the progress of DM activities.
 
 Relationship between milestones, as well as between milestones and planning packages are captured:
-milestones typically *block* planning packages, milestones can also *relate* to other milestones.
+milestones typically *block* planning packages, milestones can *block* other milestones, or they
+can *relate* to other milestones.
 
 Baseline Long-Term Plan
 -----------------------
@@ -174,17 +175,11 @@ thoroughly tested and documented.
 Cycles are planned through *epics*. Each epic must be defined such that it can be completed
 within a single cycle.
 
-Once a plan is defined for a given cycle, it is loaded into PMCS and changed-controlled. A plan for
-a cycle is loaded to PMCS during the month proceeding the start of the cycle.
+Once a plan is defined for a given cycle, it is loaded to Primavera and changed-controlled. A plan for
+a cycle is loaded to Primavera during the month proceeding the start of the cycle.
 
 Any non-trivial adjustments to the plan that affect scope, schedule or budget must be approved
 by CCB.
-
-It is acceptable to load the plan in 3-month chunks, e.g., the plan for
-the first 3 months of the cycle is loaded before the start of the cycle, and the remaining
-part of the plan covering the last 3 months is loaded before the 4th month starts. This
-allows for minor fine-tuning of the second half of the cycle without going through the CCB
-approval.
 
 Level of Effort
 ---------------
@@ -200,23 +195,19 @@ treated as LOE or non-LOE:
   Examples of LOE activities include replacing faulty disk drive, cluster maintenance, or writing monthly
   status report.
 
-For planning purposes, 70% of available time of each software developer is assumed to be available
-for "pure, uninterrupted coding", and the remaining 30% is considered as "overhead", and tracked
+For planning purposes, on average 70% of available time of each software developer is assumed to be
+available for "pure, uninterrupted coding", and the remaining 30% is considered as "overhead", and tracked
 explicitly as LOE.
 
-A small fraction of all DM labor is performed by contractors. The contractor labor is managed as LOE,
-directly in dollars.
+A small fraction of all DM labor is performed by contractors. The contractor labor is typically managed
+as LOE, directly in dollars, rather than in epics and stories.
 
 People
 ======
 
-* DM Project Manager responsible for overall plan, schedule and priorities.
-
-* Work divided into smaller pieces, through WBS.
-
-* Each piece has a dedicated technical manager.
-
-* Main responsibilities of technical managers:
+The DM Project Manager is responsible for the overall DM plan, schedule and priorities. The work is
+divided into smaller pieces through WBS, and assigned to technical and cost account managers (TCAMs),
+such that each piece has one dedicated TCAM. Main responsibilities of TCAMs:
 
   * Assemble the team capable of delivering work scoped through the WBS on-time and within budget.
     Provide daily technical management and leadership for the team, monitor and optimize team performance.
@@ -226,8 +217,6 @@ People
 
   * Report group's activities as required, including reporting to the Earned Value Management System (EVMS)
     used by LSST, and providing input for monthly status reports.
-
-* In a sense, DM PM "owns" the overall baseline plan (PPs, milestones), and technical manager "own" epics.
 
 
 Tools
