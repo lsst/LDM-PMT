@@ -6,9 +6,9 @@ LDM-PMT
 LSST DM Project Management and Tools
 ====================================
 
-This is a working repository for *LDM-PMT: LSST DM Project Management and Tools*.
+This is a working repository for *LDM-472: LSST DM Project Management and Tools*.
 
-* Read the living document on the web: http://ldm-pmt.lsst.io
+* Read the living document on the web: http://ldm-472.lsst.io
 
 Working with this document
 --------------------------
@@ -24,7 +24,7 @@ The built site can be viewed by opening ``_build/html/index.html`` in
 your web browser.
 
 Whenever you push to ``master``, readthedocs.org will build and host the
-document at http://ldm-pmt.lsst.io
+document at http://ldm-472.lsst.io
 
 Editing metadata
 ----------------
