@@ -3,6 +3,7 @@ doc_title: 'LSST DM Project Management and Tools'
 copyright: '2016, AURA/LSST'
 authors:
     - Jacek Becla
-# Current document version
-last_revised: 'March 6, 2016'
-version: '0.1.dev'
+# Current document version; defaults to git commit date if commented
+# last_revised: '2016-03-06'
+# Uncomment to set a version name; defaults to git branch
+# version: '0.1.dev'
