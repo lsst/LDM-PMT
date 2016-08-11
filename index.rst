@@ -76,7 +76,7 @@ All together, this collection of documents capture all work DM has to deliver du
 
 Planning Packages
 -----------------
-The work is divided into *o(few hundred)* concrete, technical *packages of planned work*. The packages divide work
+The work is divided into a few hundred concrete, technical *packages of planned work*. The packages divide work
 at the 4th Level of WBS, e.g., typically a 4th Level WBS is broken down into 20-50 packages. Each such package
 addresses a piece of work defined in the baseline documents, and all together they cover the entire DM baseline.
 Each package has a clearly defined scope, deliverable(s), resource cost, and an end date. Additionally,
@@ -93,8 +93,6 @@ Each planning package has at least one milestone, used to mark the completion of
 It is not uncommon to have multiple milestones per package to track progress along the way.
 Milestones can be related to multiple planning packages, potentially from different WBSes.
 Each milestone has a description, and due date; it has no duration, and no resources assigned to it.
-It is not uncommon for a milestone to related to multiple planning packages, possibly from
-different WBSes.
 
 Each activity within a planning package that involves a cross-team dependency is required to end with
 a milestone; this includes activities related to delivering software components, hardware, and services.
@@ -105,34 +103,29 @@ Further, milestones have *levels*:
 
 * Level 2 denotes cross-subsystem milestones (for example, DM milestones that affect the Camera Subsystem)
 
-* Level 3 denotes cross-team milestones within a subsystem (for example, Middleware milestones that effect the DRP Team)
+* Level 3 denotes cross-team milestones within a subsystem (for example, Middleware milestones that affect the DRP Team)
 
 * Level 4 denotes internal milestones within a team.
 
-*O(few hundred)* milestones have been defined to-date to track the progress of DM activities.
-
-Relationship between milestones, as well as between milestones and planning packages are captured:
+Relationships between milestones, as well as between milestones and planning packages are captured:
 milestones typically *block* planning packages, milestones can *block* other milestones, or they
 can *relate* to other milestones.
 
 Baseline Long-Term Plan
 -----------------------
 
-Planning packages, together with milestones form the *Baseline Plan*. The plan is under change control.
+Planning packages, together with milestones form the *Baseline Plan*.
+This plan is under change control.
+As such, most changes to the plan, including changing scope, cost or schedule, must be approved by the appropriate body.
+Specifically:
 
-The plan is stable. Any change to the plan, including changing scope, cost or schedule, must be approved
-by the appropriate change control body:
+* Change Control Board approval is required for any non-trivial change to a planning package or Level 1 or 2 milestone;
 
-* Change Control Board approval for any non-trivial change to a planning package or Level 1 and
-  Level 2 milestone
+* DM :abbr:`TCT (Technical Control Team)` approval is required for changes to level 3 milestones;
 
-* DM's TCT approval for Level 3 milestones
+* No approval is required for Level 4 milestones, however any non-trivial change must be communicated to the DM team;
 
-* no approval is needed for Level 4 milestones, however any non-trivial change must be communicated
-  to the DM team
-
-* trivial changes, such as small corrections / clarifications to narrative that do not affect
-  scope, time or budget are allowed without approval.
+* Trivial changes, such as small corrections / clarifications to narrative that do not affect scope, time or budget are allowed without approval.
 
 Typically, adjustments to Level 1, 2 and 3 milestones are made every 6 or 12 months. Changes to Level 4
 milestones can occur more frequently.
@@ -147,21 +140,21 @@ In the EVMS world, epics map directly to *activities*, and stories map to *activ
 Epics and Stories
 ~~~~~~~~~~~~~~~~~
 
-Typically, planning packages encompass relatively large blocks of work. To plan and execute work
-in details, finer-grain planning is required. This is implemented through epics and stories.
+Typically, planning packages encompass relatively large blocks of work.  In practice, to execute and track
+work, a finer grain of planning is required. This is implemented through epics and stories.
 
-Each epic captures a non-trivial work that is associated with a subset of work defined in a
-planning package. Each epic has a clear description, well defined deliverables, and
-relationships with a planning package (an epic *implements* a PP), and a milestone (an epic
-*blocks* a milestone). Epics are resource loaded, and have start and end dates defined.
+Each epic captures a non-trivial subset of the work defined in a planning package.  The epic has a clear
+description, well defined deliverables, and relationships with planning packages (an epic *implements* a PP),
+and milestones (an epic *blocks* a milestone).  Epics are resource loaded, and have start and end dates
+defined.
 
 Each epic is broken into smaller chunks of work, called *stories*. Stories are primarily used
 to define and manage the short-term activities of individual developers.
 
-Epics and stories are used to track all software work, as well as work on delivering hardware and
-services that are tightly coupled with software (example: "Deliver OpenStack-based Test Cluster
-running RedHat 6.1".) Details of work on standalone activities do not have to be captured on daily
-bases through stories (example: "Deliver 10Gbit link between Chile and USA")
+Epics and stories are used to track all software work, as well as work on delivering hardware and services
+that are tightly coupled with software (example: "Deliver OpenStack-based Test Cluster running RedHat 6.1".)
+Work which has no direct relationship to software development do not have to be flowed down to stories
+(example: "Deliver 10Gbit link between Chile and USA").
 
 .. _cycles-and-releases:
 
@@ -175,11 +168,11 @@ thoroughly tested and documented.
 Cycles are planned through *epics*. Each epic must be defined such that it can be completed
 within a single cycle.
 
-Once a plan is defined for a given cycle, it is loaded to Primavera and changed-controlled. A plan for
+Once a plan is defined for a given cycle, it is loaded to Primavera and change-controlled. A plan for
 a cycle is loaded to Primavera during the month proceeding the start of the cycle.
 
-Any non-trivial adjustments to the plan that affect scope, schedule or budget must be approved
-by CCB.
+After a cycle has started, any adjustments to the plan for that cycle which affect scope, schedule or budget
+must be approved by the LSST :abbr:`CCB (Change Control Board)`.
 
 Level of Effort
 ---------------
@@ -188,12 +181,12 @@ Two general rules are applied for the DM Team labor when determining whether an 
 treated as LOE or non-LOE:
 
 * All activities that have a clear deliverable are tracked through non-LOE. Examples of non-LOE
-  activities include writing a new piece of software, purchasing new equipment, or adding new
-  machines to the cluster.
+  activities include developing a new piece of software, purchasing new equipment, adding new
+  machines to the cluster, or writing a technical note.
 
-* Activities that can not be predicted, as well as short, recurring routine activities are considered LOE.
-  Examples of LOE activities include replacing faulty disk drive, cluster maintenance, or writing monthly
-  status report.
+* Activities that cannot be predicted, as well as short, recurring routine activities are considered LOE.
+  Examples of LOE activities include replacing a faulty disk drive, cluster maintenance, or writing monthly
+  status reports.
 
 For planning purposes, on average 70% of available time of each software developer is assumed to be
 available for "pure, uninterrupted coding", and the remaining 30% is considered as "overhead", and tracked
@@ -239,8 +232,8 @@ approaches, are expected to be provided promptly (depending on urgency, weekly o
 
 
 The JIRA DMBP serves as an easy-to-use interface that TCAMs can use to interact with
-the Baseline Plan. Changes made to the JIRA DLP are periodically submitted to CCB
-and transferred to the Primavera when approved (every 6 or 12 month). The Primavera
+the Baseline Plan. Changes made to the JIRA DMBP are periodically submitted to CCB
+and transferred to the Primavera when approved (every 6 or 12 months). The Primavera
 version is always the authoritative source of truth.
 
 .. image:: baselinePlanDiagram.png
