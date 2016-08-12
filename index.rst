@@ -10,7 +10,7 @@ Change Record
 +-------------+------------+----------------------------------+-----------------+
 | **Version** | **Date**   | **Description**                  | **Owner**       |
 +=============+============+==================================+=================+
-| 1.0         | 6/11/2016  | First version.                   | Jacek Becla     |
+| 1.0         | 2016-08-11 | First version.                   | Jacek Becla     |
 +-------------+------------+----------------------------------+-----------------+
 
 
@@ -46,6 +46,9 @@ The project planning processes described in this documents have been structured 
 address all of the above (often not fully aligned!) needs. It is a fusion of
 the Earned Value Management System, and the Project Planning with Agile Process.
 
+.. NOTE::
+   Some of the processes described in this document are not yet implemented.
+   The expected completion of implementing them is December 31, 2016.
 
 .. _baseline-plan:
 
@@ -108,8 +111,7 @@ Further, milestones have *levels*:
 * Level 4 denotes internal milestones within a team.
 
 Relationships between milestones, as well as between milestones and planning packages are captured:
-milestones typically *block* planning packages, milestones can *block* other milestones, or they
-can *relate* to other milestones.
+milestones typically *block* planning packages and other milestones.
 
 Baseline Long-Term Plan
 -----------------------
@@ -144,9 +146,9 @@ Typically, planning packages encompass relatively large blocks of work.  In prac
 work, a finer grain of planning is required. This is implemented through epics and stories.
 
 Each epic captures a non-trivial subset of the work defined in a planning package.  The epic has a clear
-description, well defined deliverables, and relationships with planning packages (an epic *implements* a PP),
-and milestones (an epic *blocks* a milestone).  Epics are resource loaded, and have start and end dates
-defined.
+description, well defined deliverables, and relationships with planning packages (an epic *implements* a subset of a PP),
+and milestones (an epic *blocks* a milestone). Epics covering non-estimable research work are timeboxed.
+Every epics is resource loaded and has start and end dates defined.
 
 Each epic is broken into smaller chunks of work, called *stories*. Stories are primarily used
 to define and manage the short-term activities of individual developers.
@@ -163,7 +165,8 @@ Cycles and Releases
 
 The work is executed through 6-month *cycles*. The scope of work for each cycle is driven by the
 Baseline Plan, in particular by milestones. Each cycle ends with a new software release. Releases are
-thoroughly tested and documented.
+tested and documented according to standards defined in separate DM documents (the reference will be
+added once these documents are finished).
 
 Cycles are planned through *epics*. Each epic must be defined such that it can be completed
 within a single cycle.
@@ -192,13 +195,14 @@ For planning purposes, on average 70% of available time of each software develop
 available for "pure, uninterrupted coding", and the remaining 30% is considered as "overhead", and tracked
 explicitly as LOE.
 
-A small fraction of all DM labor is performed by contractors. The contractor labor is typically managed
-as LOE, directly in dollars, rather than in epics and stories.
+A small portion of certain hardware and service contracts is for labor. This labor overhead is managed
+as LOE, directly in dollars, rather than as epics and stories.
 
 People
 ======
 
-The DM Project Manager is responsible for the overall DM plan, schedule and priorities. The work is
+The DM Project Manager is responsible for the overall DM plan, schedule and priorities, as well as
+mediating any disagreements that might arise. The work is
 divided into smaller pieces through WBS, and assigned to technical and cost account managers (TCAMs),
 such that each piece has one dedicated TCAM. Main responsibilities of TCAMs:
 
@@ -211,6 +215,7 @@ such that each piece has one dedicated TCAM. Main responsibilities of TCAMs:
   * Report group's activities as required, including reporting to the Earned Value Management System (EVMS)
     used by LSST, and providing input for monthly status reports.
 
+Note that the DM Organization is described in a separate document (LDM-294).
 
 Tools
 =====
