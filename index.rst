@@ -44,7 +44,7 @@ the team's efficiency.
 
 The project planning processes described in this documents have been structured to
 address all of the above (often not fully aligned!) needs. It is a fusion of
-the Earned Value Management System, and the Project Planning with Agile Process and builds
+the Earned Value Management System and the Project Planning with Agile Process and builds
 on previous project experience :cite:`2016SPIE.9911E..0NK`.
 
 .. NOTE::
@@ -153,7 +153,7 @@ work, a finer grain of planning is required. This is implemented through epics a
 Each epic captures a non-trivial subset of the work defined in a planning package.  The epic has a clear
 description, well defined deliverables, and relationships with planning packages (an epic *implements* a subset of a PP),
 and milestones (an epic *blocks* a milestone). Epics covering non-estimable research work are timeboxed.
-Every epics is resource loaded and has start and end dates defined.
+Every epic is resource loaded and has start and end dates defined.
 
 Each epic is broken into smaller chunks of work, called *stories*. Stories are primarily used
 to define and manage the short-term activities of individual developers.
@@ -177,7 +177,7 @@ Cycles are planned through *epics*. Each epic must be defined such that it can b
 within a single cycle.
 
 Once a plan is defined for a given cycle, it is loaded to Primavera and change-controlled. A plan for
-a cycle is loaded to Primavera during the month proceeding the start of the cycle.
+a cycle is loaded to Primavera during the month preceding the start of the cycle.
 
 After a cycle has started, any adjustments to the plan for that cycle which affect scope, schedule or budget
 must be approved by the LSST :abbr:`CCB (Change Control Board)`.
