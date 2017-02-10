@@ -51,10 +51,6 @@ on previous project experience :cite:`2016SPIE.9911E..0NK`.
    See `DMTN-020: Project Management Guide <https://dmtn-020.lsst.io>`_ :cite:`DMTN-020` for
    details on the implementation of the process described here.
 
-.. NOTE::
-   Some of the processes described in this document are not yet implemented.
-   The expected completion of implementing them is December 31, 2016.
-
 .. _baseline-plan:
 
 DM Project Management Planning Process
