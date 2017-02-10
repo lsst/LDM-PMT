@@ -44,7 +44,12 @@ the team's efficiency.
 
 The project planning processes described in this documents have been structured to
 address all of the above (often not fully aligned!) needs. It is a fusion of
-the Earned Value Management System, and the Project Planning with Agile Process.
+the Earned Value Management System and the Project Planning with Agile Process and builds
+on previous project experience :cite:`2016SPIE.9911E..0NK`.
+
+.. NOTE::
+   See `DMTN-020: Project Management Guide <https://dmtn-020.lsst.io>`_ :cite:`DMTN-020` for
+   details on the implementation of the process described here.
 
 .. NOTE::
    Some of the processes described in this document are not yet implemented.
@@ -63,17 +68,17 @@ Baseline Documents
 The baseline design and architecture of the DM Subsystem is captured through a set of change-controlled
 documents, including:
 
-* LDM-148 DM System Design
+* `LDM-148 DM System Design <https://ls.st/LDM-148>`_ :cite:`LDM-148`
 
-* LDM-151 DM Applications Design
+* `LDM-151 DM Applications Design <https://ls.st/LDM-151>`_ :cite:`LDM-151`
 
-* LDM-152 DM Middleware Design
+* `LDM-152 DM Middleware Design <https://ls.st/LDM-152>`_ :cite:`LDM-152`
 
-* LDM-135 DM Database Design
+* `LDM-135 DM Database Design <https://ls.st/LDM-135>`_ :cite:`LDM-135`
 
-* LDM-131 DM SUIT Conceptual Design
+* `LDM-131 DM SUIT Conceptual Design <https://ls.st/LDM-131>`_ :cite:`LDM-131`
 
-The complete set of DM baseline documents can be found in Docushare, Collection-2511.
+The complete set of DM baseline documents can be found in Docushare, `Collection-2511 <https://ls.st/Collection-2511>`_.
 
 All together, this collection of documents capture all work DM has to deliver during the LSST Construction.
 
@@ -123,7 +128,7 @@ Specifically:
 
 * Change Control Board approval is required for any non-trivial change to a planning package or Level 1 or 2 milestone;
 
-* DM :abbr:`TCT (Technical Control Team)` approval is required for changes to level 3 milestones;
+* DM `TCT (Technical Control Team) <https://confluence.lsstcorp.org/display/DM/Technical+Control+Team>`_ approval is required for changes to level 3 milestones;
 
 * No approval is required for Level 4 milestones, however any non-trivial change must be communicated to the DM team;
 
@@ -148,7 +153,7 @@ work, a finer grain of planning is required. This is implemented through epics a
 Each epic captures a non-trivial subset of the work defined in a planning package.  The epic has a clear
 description, well defined deliverables, and relationships with planning packages (an epic *implements* a subset of a PP),
 and milestones (an epic *blocks* a milestone). Epics covering non-estimable research work are timeboxed.
-Every epics is resource loaded and has start and end dates defined.
+Every epic is resource loaded and has start and end dates defined.
 
 Each epic is broken into smaller chunks of work, called *stories*. Stories are primarily used
 to define and manage the short-term activities of individual developers.
@@ -172,7 +177,7 @@ Cycles are planned through *epics*. Each epic must be defined such that it can b
 within a single cycle.
 
 Once a plan is defined for a given cycle, it is loaded to Primavera and change-controlled. A plan for
-a cycle is loaded to Primavera during the month proceeding the start of the cycle.
+a cycle is loaded to Primavera during the month preceding the start of the cycle.
 
 After a cycle has started, any adjustments to the plan for that cycle which affect scope, schedule or budget
 must be approved by the LSST :abbr:`CCB (Change Control Board)`.
@@ -215,7 +220,7 @@ such that each piece has one dedicated TCAM. Main responsibilities of TCAMs:
   * Report group's activities as required, including reporting to the Earned Value Management System (EVMS)
     used by LSST, and providing input for monthly status reports.
 
-Note that the DM Organization is described in a separate document (LDM-294).
+Note that the DM Organization is described in a separate document (`see LDM-294 <https://ls.st/LDM-294>`_ :cite:`LDM-294`).
 
 Tools
 =====
@@ -246,3 +251,10 @@ version is always the authoritative source of truth.
 
 The above diagram summarizes what needs to be approved by CCB, what is stored in
 Primavera, and what is stored in JIRA.
+
+References
+==========
+
+.. bibliography:: bibliography.bib
+   :encoding: latex+latin
+   :style: plain
