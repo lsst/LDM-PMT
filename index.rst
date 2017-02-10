@@ -198,7 +198,7 @@ For planning purposes, on average 70% of available time of each software develop
 available for "pure, uninterrupted coding", and the remaining 30% is considered as "overhead", and tracked
 explicitly as LOE.
 
-A small portion of certain hardware and service contracts is for labor. This labor overhead is managed
+A small portion of certain hardware and service contracts is for labor. This labor overhead is managed
 as LOE, directly in dollars, rather than as epics and stories.
 
 People
