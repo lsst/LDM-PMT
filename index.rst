@@ -224,7 +224,7 @@ Tools
 The master copy of the Baseline Plan, which includes all planning packages and all milestones is captured
 in Primavera. This is always the authoritative source of truth for the Baseline Plan.
 
-Information about milestones is also kept in JIRA DM Baseline Plan (DMBP) project, and is periodically
+Information about milestones is also kept in JIRA DM Long-range Planning (DLP) project, and is periodically
 synchronized with Primavera. Having milestones in JIRA is, in particular, useful for expressing blocking
 relationships between milestones and epics between different teams.
 
@@ -237,8 +237,8 @@ updates for activities that block other teams, in particular when the delivery d
 approaches, are expected to be provided promptly (depending on urgency, weekly or even daily)
 
 
-The JIRA DMBP serves as an easy-to-use interface that TCAMs can use to interact with
-the Baseline Plan. Changes made to the JIRA DMBP are periodically submitted to CCB
+The JIRA DLP serves as an easy-to-use interface that TCAMs can use to interact with
+the Baseline Plan. Changes made to the JIRA DLP are periodically submitted to CCB
 and transferred to the Primavera when approved (every 6 or 12 months). The Primavera
 version is always the authoritative source of truth.
 
