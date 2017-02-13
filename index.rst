@@ -1,7 +1,5 @@
 :tocdepth: 2
 
-.. sectnum::
-
 .. _change-record:
 
 Change Record
