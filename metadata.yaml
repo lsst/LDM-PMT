@@ -1,9 +1,16 @@
 doc_id: 'LDM-472'
 doc_title: 'LSST DM Project Management and Tools'
-copyright: '2016, AURA/LSST'
+copyright: '2016-2017, Association of Universities for Research in Astronomy'
 authors:
     - Jacek Becla
+    - Frossie Economou
+    - Fritz Mueller
+    - Margaret Johnson
+    - K. Simon Krughoff
+    - K-T Lim
+    - John Swinbank
+    - Xiuqin Wu
 # Current document version; defaults to git commit date if commented
-# last_revised: '2016-03-06'
+last_revised: '2017-02-15'
 # Uncomment to set a version name; defaults to git branch
 # version: '0.1.dev'
