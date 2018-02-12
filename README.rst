@@ -1,33 +1,16 @@
-#######
-LDM-PMT
-#######
-
-====================================
+####################################
 LSST DM Project Management and Tools
-====================================
+####################################
 
-This is a working repository for *LDM-472: LSST DM Project Management and Tools*.
+LDM-472
+=======
 
-* Read the living document on the web: http://ldm-472.lsst.io
+This document describes the project planning processes and tools used in the
+DM Subsystem,
+with particular emphasis on software development.
 
-Working with this document
---------------------------
+**Links**
 
-.. code::
-
-   git clone git@github.com:lsst/LDM-PMT.git
-   cd LDM-PMT
-   pip install -r requirements.txt
-   make html
-
-The built site can be viewed by opening ``_build/html/index.html`` in
-your web browser.
-
-Whenever you push to ``master``, readthedocs.org will build and host the
-document at http://ldm-472.lsst.io
-
-Editing metadata
-----------------
-
-Metadata, such as document version, title, date of last edit, and
-authors, are maintained in the ``metadata.yaml`` file
+- Accepted version on DocuShare: https://ls.st/ldm-472
+- GitHub: https://github.com/lsst/LDM-472
+- Drafts: https://ldm-472.lsst.io/v
