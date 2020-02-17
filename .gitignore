@@ -1,1 +1,8 @@
+LDM-472.pdf
 _build
+*.aux
+*.log
+*.toc
+*.fls
+*.fdb_*
+*.out
